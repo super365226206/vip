@@ -1,0 +1,29 @@
+header {
+    .wrapper {
+        position: relative;
+        height: 100px;
+        .login-logo {
+            display: inline;
+            float: left;
+            a {
+                background-image: url(../img/login-logo.png);
+                background-position: -308px -57px;
+                width: 125px;
+                height: 100px;
+                display: inline-block;
+                vertical-align: top;
+                line-height: 500px;
+                overflow: hidden;
+            }
+        }
+        .login-logo-right {
+            background-image: url(../img/login-logo.png);
+            background-position: 0 0;
+            width: 304px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+}

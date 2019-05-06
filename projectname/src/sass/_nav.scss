@@ -1,0 +1,42 @@
+@charset "utf-8";
+//导航栏
+#nav {
+    ul {
+        height: 43px;
+        line-height: 43px;
+        font-size: 14px;
+        li:first-child {
+            display: block;
+            padding: 0 10px;
+            text-align: center;
+            font-size: 16px;
+            white-space: nowrap;
+            background-color: #f10180;
+            width: 156px;
+            height: auto;
+            margin-right: 20px;
+            a {
+                color: #fff;
+            }
+        }
+        li {
+            float: left;
+            position: relative;
+            a {
+                display: block;
+                padding: 0 10px;
+                text-align: center;
+                color: #333;
+                font-size: 16px;
+                white-space: nowrap;
+            }
+        }
+        .active {
+            cursor: default;
+            font-weight: 700;
+            a {
+                color: #f10180;
+            }
+        }
+    }
+}

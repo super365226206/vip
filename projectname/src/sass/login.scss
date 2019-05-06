@@ -1,0 +1,10 @@
+@charset "utf-8";
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+//引入分部文件
+@import "login_header";
+@import "login_main";
+@import "login_footer";

@@ -1,0 +1,25 @@
+@charset "utf-8";
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+main {
+    background: url(../img/background.jpg) no-repeat top center;
+}
+
+// 引入各部分css文件
+@import "header-top-nav";
+@import "header-logo";
+@import "nav";
+@import "main_banner";
+@import "main_stairs_must_see";
+@import "main_stairs_info";
+@import "main_stairs_left";
+// @import "right-nav";
+@import "footer_list";
+@import "footer_info";

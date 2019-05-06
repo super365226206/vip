@@ -1,0 +1,212 @@
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+header .wrapper {
+  position: relative;
+  height: 100px;
+}
+header .wrapper .login-logo {
+  display: inline;
+  float: left;
+}
+header .wrapper .login-logo a {
+  background-image: url(../img/login-logo.png);
+  background-position: -308px -57px;
+  width: 125px;
+  height: 100px;
+  display: inline-block;
+  vertical-align: top;
+  line-height: 500px;
+  overflow: hidden;
+}
+header .wrapper .login-logo-right {
+  background-image: url(../img/login-logo.png);
+  background-position: 0 0;
+  width: 304px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+main {
+  background: url(../img/load.jpg) no-repeat top center;
+}
+main .wrapper {
+  padding: 50px 20px;
+  min-height: 550px;
+}
+main .wrapper .content-info {
+  width: 360px;
+  border-radius: 2px;
+  background-color: #fff;
+  float: right;
+}
+main .wrapper .content-info .info-body {
+  width: 360px;
+}
+main .wrapper .content-info .info-body .info-nav {
+  border-bottom: 1px solid #e0e0e0;
+}
+main .wrapper .content-info .info-body .info-nav .info-nav-content {
+  display: inline-block;
+  width: 177px;
+  vertical-align: top;
+  text-align: center;
+  color: #666;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+main .wrapper .content-info .info-body .info-nav .info-nav-content:first-child::after {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  z-index: 1;
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  content: '';
+  font-size: 0;
+  line-height: 0;
+}
+main .wrapper .content-info .info-body .info-nav .login-active {
+  color: #f10180;
+  cursor: default;
+}
+main .wrapper .content-info .info-body .info-content {
+  padding-top: 36px;
+  text-align: center;
+}
+main .wrapper .content-info .info-body .info-content .info-content-code {
+  position: relative;
+  z-index: 1;
+  min-height: 192px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-code .info-content-pic {
+  position: absolute;
+  top: 50%;
+  left: 94px;
+  z-index: 2;
+  margin-top: -86px;
+  padding: 10px;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border: 1px solid #f0f0f0;
+}
+main .wrapper .content-info .info-body .info-content .info-content-code .info-content-pic img {
+  width: 150px;
+  height: 150px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-text {
+  margin-top: 20px;
+  color: #333;
+  line-height: 16px;
+  font-size: 12px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-text .text-code-pic {
+  background-image: url(../img/login-logo.png);
+  background-position: -605px -121px;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: top;
+}
+main .wrapper .content-info .info-body .info-content .info-content-text .text-user {
+  color: #f10180;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from {
+  margin-right: auto;
+  margin-left: auto;
+  width: 300px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .input-group {
+  position: relative;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .input-group input {
+  padding-left: 40px;
+  width: 248px;
+  height: 32px;
+  line-height: 32px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #b2b2b2;
+  border-radius: 3px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .input-group .input-pic {
+  background-image: url(../img/login-logo.png);
+  background-position: -468px -161px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  vertical-align: top;
+  position: absolute;
+  top: 10px;
+  left: 15px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .input-tips {
+  font-size: 12px;
+  position: relative;
+  min-height: 19px;
+  max-height: 36px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  line-height: 1.5;
+  display: block;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .info-input-check {
+  width: 300px;
+  height: 19px;
+  position: relative;
+  vertical-align: top;
+  font-size: 12px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .info-input-check .info-checkbox-left {
+  float: left;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .info-input-check .info-checkbox-left .check-info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-size: 0;
+  line-height: 0;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .info-input-check .info-checkbox-left .check-info input {
+  display: none;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .info-input-check .info-checkbox-left .check-info label {
+  background-image: url(../img/checkbox.png);
+  background-position: -48px 0;
+  width: 19px;
+  height: 16px;
+  display: block;
+  cursor: pointer;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-input .info-input-check .info-checkbox-right {
+  float: right;
+  cursor: pointer;
+}
+main .wrapper .content-info .info-body .i-hide {
+  display: none;
+}
+
+footer .wrapper {
+  height: 78px;
+  line-height: 78px;
+}
+footer .wrapper .footer-info {
+  color: #666;
+  text-align: center;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,94 @@
+    @charset "utf-8";
+    #banner {
+        padding-top: 30px;
+        padding-bottom: 20px;
+        position: relative;
+        margin-bottom: 10px;
+        #banner-pic {
+            padding: 12px;
+            padding-bottom: 0;
+            background: rgba(255, 255, 255, .86);
+            width: 976px;
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0 1px 3px rgba(167, 167, 167, .4);
+            .banner-pic-align {
+                width: 976px;
+                height: 380px;
+                margin: 0 auto;
+                position: relative;
+                overflow: hidden;
+                ul {
+                    overflow: hidden;
+                    height: 340px;
+                    li {
+                        width: 976px;
+                        height: 340px;
+                        z-index: 1;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        img {
+                            width: 976px;
+                            height: 340px;
+                        }
+                    }
+                }
+            }
+            span {
+                background: rgba(0, 0, 0, .2);
+                border-radius: 2px;
+                position: absolute;
+                width: 33px;
+                height: 66px;
+                line-height: 66px;
+                font-size: 24px;
+                cursor: pointer;
+                top: 50%;
+                margin-top: -53px;
+                z-index: 2;
+                text-align: center;
+                transition: all .3s ease-in;
+                font-size: 16px;
+            }
+            .banner-right {
+                right: 0px;
+            }
+        }
+        #banner-title {
+            text-align: center;
+            width: 976px;
+            left: 50%;
+            margin-left: -488px;
+            height: 40px;
+            position: absolute;
+            z-index: 2;
+            bottom: 20px;
+            line-height: 40px;
+            span {
+                display: inline-block;
+                width: 195px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                height: 40px;
+                font: 12px/40px 'microsoft Yahei';
+                color: #666;
+                cursor: pointer;
+                border-bottom: transparent 3px solid;
+                position: relative;
+            }
+            span::after {
+                content: "|";
+                font-family: tohama;
+                font-size: 10px;
+                margin-left: 10px;
+                color: #e8e8e8;
+                position: absolute;
+                right: 0;
+            }
+            span:last-child::after {
+                content: "";
+            }
+        }
+    }

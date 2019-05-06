@@ -1,0 +1,172 @@
+@charset "utf-8";
+main {
+    background: url(../img/load.jpg) no-repeat top center;
+    .wrapper {
+        padding: 50px 20px;
+        min-height: 550px;
+        .content-info {
+            width: 360px;
+            border-radius: 2px;
+            background-color: #fff;
+            float: right;
+            .info-body {
+                width: 360px;
+                .info-nav {
+                    border-bottom: 1px solid #e0e0e0;
+                    .info-nav-content {
+                        display: inline-block;
+                        width: 177px;
+                        vertical-align: top;
+                        text-align: center;
+                        color: #666;
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 50px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        position: relative;
+                    }
+                    .info-nav-content:first-child::after {
+                        position: absolute;
+                        top: 15px;
+                        right: 0;
+                        z-index: 1;
+                        width: 1px;
+                        height: 20px;
+                        background-color: #ccc;
+                        content: '';
+                        font-size: 0;
+                        line-height: 0;
+                    }
+                    .login-active {
+                        color: #f10180;
+                        cursor: default;
+                    }
+                }
+                .info-content {
+                    padding-top: 36px;
+                    text-align: center;
+                    .info-content-code {
+                        position: relative;
+                        z-index: 1;
+                        min-height: 192px;
+                        .info-content-pic {
+                            position: absolute;
+                            top: 50%;
+                            left: 94px;
+                            z-index: 2;
+                            margin-top: -86px;
+                            padding: 10px;
+                            width: 150px;
+                            height: 150px;
+                            background-color: #fff;
+                            border: 1px solid #f0f0f0;
+                            img {
+                                width: 150px;
+                                height: 150px;
+                            }
+                        }
+                    }
+                    .info-content-text {
+                        margin-top: 20px;
+                        color: #333;
+                        line-height: 16px;
+                        font-size: 12px;
+                        .text-code-pic {
+                            background-image: url(../img/login-logo.png);
+                            background-position: -605px -121px;
+                            width: 16px;
+                            height: 16px;
+                            display: inline-block;
+                            margin-right: 6px;
+                            vertical-align: top;
+                        }
+                        .text-user {
+                            color: #f10180;
+                        }
+                    }
+                    .info-content-from {
+                        margin-right: auto;
+                        margin-left: auto;
+                        width: 300px;
+                        .info-input {
+                            .input-group {
+                                position: relative;
+                                input {
+                                    padding-left: 40px;
+                                    width: 248px;
+                                    height: 32px;
+                                    line-height: 32px;
+                                    color: #333;
+                                    background-color: #fff;
+                                    border: 1px solid #b2b2b2;
+                                    border-radius: 3px;
+                                }
+                                .input-pic {
+                                    background-image: url(../img/login-logo.png);
+                                    background-position: -468px -161px;
+                                    width: 20px;
+                                    height: 20px;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    position: absolute;
+                                    top: 10px;
+                                    left: 15px;
+                                }
+                            }
+                            .input-tips {
+                                font-size: 12px;
+                                position: relative;
+                                min-height: 19px;
+                                max-height: 36px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                margin-top: 2px;
+                                margin-bottom: 5px;
+                                line-height: 1.5;
+                                display: block;
+                            }
+                            .info-input-check {
+                                width: 300px;
+                                height: 19px;
+                                position: relative;
+                                vertical-align: top;
+                                font-size: 12px;
+                                .info-checkbox-left {
+                                    float: left;
+                                    .check-info {
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                        margin-right: 5px;
+                                        font-size: 0;
+                                        line-height: 0;
+                                        input {
+                                            display: none;
+                                        }
+                                        label {
+                                            background-image: url(../img/checkbox.png);
+                                            background-position: -48px 0;
+                                            width: 19px;
+                                            height: 16px;
+                                            // background-position: -24px 0;
+                                            display: block;
+                                            cursor: pointer;
+                                        }
+                                    }
+                                    label {}
+                                }
+                                .info-checkbox-right {
+                                    float: right;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                }
+                .i-hide {
+                    display: none;
+                }
+            }
+        }
+    }
+}

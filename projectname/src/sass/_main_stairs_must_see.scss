@@ -1,0 +1,238 @@
+@charset "utf-8";
+//主体楼梯
+#main-stairs-must-see {
+    margin-bottom: 70px;
+}
+
+#main-must-see-title {
+    margin-bottom: 20px;
+    img {
+        width: 100%;
+    }
+}
+
+#main-must-see-info {
+    overflow: hidden;
+    .must-see-left {
+        float: left;
+        width: 510px;
+        height: 536px;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        img {
+            left: 0px;
+            top: 0px;
+            width: 510px;
+            height: 536px;
+            overflow: hidden;
+            object-fit: contain;
+            position: absolute;
+        }
+        @for $i from 1 to 7 {
+            .info-left-list#{$i} {
+                @if($i>3) {
+                    img {
+                        left: 18px + ($i - 4)* 154;
+                        top: 308px;
+                    }
+                    .list-bottom {
+                        left: 18px + ($i - 4)* 154;
+                        top: 454px;
+                    }
+                }
+                @else {
+                    img {
+                        left: 18px + ($i - 1)* 154;
+                        top: 88px;
+                    }
+                    .list-bottom {
+                        left: 18px + ($i - 1) * 154;
+                        top: 234px;
+                    }
+                }
+            }
+        }
+        .info-left-list {
+            img {
+                z-index: 455;
+                width: 146px;
+                height: 146px;
+                overflow: hidden;
+                object-fit: contain;
+                position: absolute;
+            }
+            .list-bottom {
+                z-index: 457;
+                width: 146px;
+                height: 66px;
+                overflow: hidden;
+                background-color: rgb(255, 255, 255);
+                position: absolute;
+                span {
+                    overflow: hidden;
+                    white-space: nowrap;
+                    position: absolute;
+                    text-overflow: ellipsis;
+                    text-align: left;
+                }
+                .list-title {
+                    left: 10px;
+                    top: 10px;
+                    width: 130px;
+                    height: 18px;
+                    font-size: 14px;
+                    color: rgb(0, 0, 0);
+                }
+                .list-slogan {
+                    left: 10px;
+                    top: 35px;
+                    width: 40px;
+                    height: 20px;
+                    line-height: 20px;
+                    background-color: rgb(222, 61, 150);
+                    font-size: 12px;
+                    color: rgb(255, 255, 255);
+                    text-align: center;
+                }
+                .list-price {
+                    left: 50px;
+                    top: 37px;
+                    width: 48px;
+                    height: 20px;
+                    font-size: 16px;
+                    color: rgb(0, 0, 0);
+                }
+                .list-oriprice {
+                    z-index: 465;
+                    left: 98px;
+                    top: 39px;
+                    width: 45px;
+                    height: 16px;
+                    overflow: hidden;
+                    font-size: 12px;
+                    color: rgb(152, 152, 159);
+                    text-decoration: line-through;
+                    white-space: nowrap;
+                    text-align: left;
+                    position: absolute;
+                }
+            }
+        }
+    }
+    .must-see-right {
+        float: left;
+        width: 490px;
+        height: 536px;
+        white-space: nowrap;
+        overflow: hidden;
+        position: relative;
+        @for $j from 1 to 7 {
+            .info-right-list#{$j} {
+                @if($j>3) {
+                    img {
+                        left: 18px + ($j - 4)* 154;
+                        top: 308px;
+                    }
+                    .list-mid {
+                        left: 39px + ($j - 4)* 154;
+                        top: 422px;
+                    }
+                    .list-slogan {
+                        left: 47px + ($j - 4) * 154;
+                        top: 502px;
+                    }
+                    .list-price {
+                        left: 88px + ($j - 4) * 154;
+                        top: 504px;
+                    }
+                }
+                @else {
+                    img {
+                        left: 18px + ($j - 1)* 154;
+                        top: 88px;
+                    }
+                    .list-mid {
+                        left: 39px + ($j - 1) * 154;
+                        top: 202px;
+                    }
+                    .list-slogan {
+                        left: 47px + ($j - 1) * 154;
+                        top: 282px;
+                    }
+                    .list-price {
+                        left: 88px + ($j - 1) * 154;
+                        top: 284px;
+                    }
+                }
+            }
+        }
+        .info-right-list {
+            span {
+                overflow: hidden;
+                white-space: nowrap;
+                position: absolute;
+                text-overflow: ellipsis;
+                text-align: left;
+            }
+            img {
+                z-index: 87;
+                // left: 18px;
+                // top: 88px;
+                width: 146px;
+                height: 186px;
+                object-fit: contain;
+                position: absolute;
+            }
+            .list-mid {
+                z-index: 89;
+                // left: 39px;
+                // top: 202px;
+                width: 104px;
+                height: 64px;
+                position: absolute;
+                background-color: rgba(255, 255, 255, 0.8);
+                img {
+                    z-index: 91;
+                    left: 20px;
+                    top: 8px;
+                    width: 66px;
+                    height: 33px;
+                    object-fit: contain;
+                    position: absolute;
+                }
+                .good-num {
+                    z-index: 93;
+                    left: 2px;
+                    bottom: 3px;
+                    width: 104px;
+                    height: 18px;
+                    font-size: 14px;
+                    color: rgb(88, 92, 100);
+                    text-align: center;
+                }
+            }
+            .list-slogan {
+                z-index: 95;
+                // left: 47px;
+                // top: 282px;
+                width: 40px;
+                height: 20px;
+                line-height: 20px;
+                background-color: rgb(255, 61, 110);
+                font-size: 12px;
+                color: rgb(255, 255, 255);
+                text-align: center;
+            }
+            .list-price {
+                z-index: 97;
+                // left: 88px;
+                // top: 284px;
+                width: 70px;
+                height: 20px;
+                font-size: 16px;
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@charset "utf-8";
+//banner图样式
+#top-logo {
+    height: 100px;
+    padding-top: 20px;
+    background-color: #fff;
+    //左侧的两个logo图片
+    #top-logo-left {
+        .top-left-vip {
+            position: relative;
+            float: left;
+            z-index: 1;
+            margin-right: 1px;
+            width: 160px;
+            height: 100px;
+            img {
+                width: 100%;
+            }
+        }
+        .top-left-promise {
+            position: relative;
+            float: left;
+            z-index: 1;
+            width: 304px;
+            height: 100px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+    //右侧的搜索框和购物袋
+    #top-logo-right {
+        float: right;
+        font-size: 12px;
+        #top-right-cart {
+            float: right;
+            position: relative;
+            margin-top: 33px;
+            margin-left: 15px;
+            padding-right: 33px;
+            padding-left: 25px;
+            width: 36px;
+            height: 32px;
+            line-height: 32px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f6f7f9;
+            border-radius: 2px;
+            a {
+                color: #333;
+                .top-cart-logo {
+                    background-image: url(../img/sprites-hash-b45bfef8.png);
+                    background-position: -114px -208px;
+                    width: 12px;
+                    height: 17px;
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    z-index: 1;
+                }
+                .top-cart-num {
+                    position: absolute;
+                    top: 8px;
+                    right: 3px;
+                    z-index: 1;
+                    border-radius: 8px;
+                    height: 16px;
+                    width: 24px;
+                    line-height: 16px;
+                    color: #fff;
+                    text-align: center;
+                    background-color: #f00581;
+                }
+            }
+        }
+        #top-right-search {
+            float: right;
+            display: inline;
+            position: relative;
+            z-index: 10;
+            margin-top: 33px;
+            width: 387px;
+            height: 32px;
+            border: 1px solid #fa2a83;
+            border-radius: 2px;
+            background-color: #fff;
+            input {
+                padding: 2px 12px;
+                width: 311px;
+                height: 28px;
+                line-height: 30px;
+                font-size: 14px;
+                color: #333;
+                border: none;
+                border-top-left-radius: 2px;
+                border-bottom-left-radius: 2px;
+                background-color: #fff;
+            }
+            a {
+                display: inline-block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                padding-top: 6px;
+                width: 53px;
+                height: 26px;
+                text-align: center;
+                background-color: #fa2a83;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                span {
+                    background-image: url(../img/sprites-hash-b45bfef8.png);
+                    background-position: -72px -208px;
+                    width: 19px;
+                    height: 22px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}
