@@ -1,6 +1,21 @@
 @charset "utf-8";
 //导航栏
+nav {
+    clear: both;
+    position: relative;
+    width: 100%;
+    height: 43px;
+    line-height: 43px;
+    background-color: #fff;
+    font-size: 14px;
+    color: #fff;
+    z-index: 1000;
+}
+
 #nav {
+    .h {
+        color: #f10180;
+    }
     ul {
         height: 43px;
         line-height: 43px;
@@ -16,6 +31,11 @@
             height: auto;
             margin-right: 20px;
             a {
+                img {
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    margin-right: 6px;
+                }
                 color: #fff;
             }
         }
@@ -30,6 +50,32 @@
                 font-size: 16px;
                 white-space: nowrap;
             }
+            .nav-more {
+                // display: none;
+                box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .06);
+                background-color: #fff;
+                position: absolute;
+                right: 0;
+                top: 43px;
+                overflow: hidden;
+                font-size: 16px;
+                font-weight: 400;
+                text-align: center;
+                .nav-more-group {
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    height: 43px;
+                    // padding: 0 15px;
+                    border-radius: 4px;
+                    vertical-align: top;
+                    overflow: hidden;
+                    a {
+                        text-decoration: none;
+                        vertical-align: top;
+                    }
+                }
+            }
         }
         .active {
             cursor: default;
@@ -39,4 +85,8 @@
             }
         }
     }
+}
+
+.h {
+    color: #f10180;
 }

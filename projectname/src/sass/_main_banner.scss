@@ -33,6 +33,9 @@
                             height: 340px;
                         }
                     }
+                    li:last-child img {
+                        opacity: 0;
+                    }
                 }
             }
             span {
@@ -50,9 +53,14 @@
                 text-align: center;
                 transition: all .3s ease-in;
                 font-size: 16px;
+                color: #fff;
+                opacity: .5;
             }
             .banner-right {
-                right: 0px;
+                right: -66px;
+            }
+            .banner-left {
+                left: -66px;
             }
         }
         #banner-title {
@@ -90,5 +98,16 @@
             span:last-child::after {
                 content: "";
             }
+            .color {
+                color: #000;
+            }
+        }
+        #banner-bottom {
+            background-color: #e6057d;
+            position: absolute;
+            bottom: -3px;
+            left: 290px;
+            height: 3px;
+            width: 195px;
         }
     }

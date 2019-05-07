@@ -104,7 +104,7 @@
             <section id="nav">
                 <ul>
                     <li>
-                        <a href="">商品分类</a>
+                        <a href=""><img src="img/nav.png" alt=""> 商品分类</a>
                     </li>
                     <li class="active">
                         <a href="">首页</a>
@@ -139,10 +139,20 @@
                     <li>
                         <a href="">预告</a>
                     </li>
-                    <li>
+                    <li class="nav_lastli">
                         <a href="">更多</a>
+                        <section class="nav-more">
+                            <section class="nav-more-group"><a href="">运动</a></section>
+                            <section class="nav-more-group"><a href="">家居</a></section>
+                            <section class="nav-more-group"><a href="">生活</a></section>
+                            <section class="nav-more-group"><a href="">配饰</a></section>
+                            <section class="nav-more-group"><a href="">唯品</a></section>
+                            <section class="nav-more-group"><a href="">金融</a></section>
+                            <section class="nav-more-group"><a href="">扶贫</a></section>
+                        </section>
                     </li>
                 </ul>
+
             </section>
         </section>
     </nav>
@@ -175,17 +185,19 @@
 
 
                         <!-- 轮播图左右两边箭头 -->
-                        <span class="banner-left"></span>
-                        <span class="banner-right"></span>
+                        <span class="banner-left">&lt;</span>
+                        <span class="banner-right">&gt;</span>
                     </section>
                 </section>
 
 
                 <!-- 轮播图底部的标题 -->
                 <section id="banner-title">
-                    <span>戴维贝拉品牌钜献 全场折上9折</span>
+                    <span class="color">戴维贝拉品牌钜献 全场折上9折</span>
                     <span>科蒙·博卡女装 3折封顶</span>
+                    <section id="banner-bottom"></section>
                 </section>
+
             </section>
 
 
@@ -329,7 +341,7 @@
                     <section id="main-stairs-left">
                         <ul>
                             <li>
-                                <a href="" class="active-click"><i></i>女装</a>
+                                <a href="" class=""><i></i>女装</a>
                             </li>
                             <li>
                                 <a href=""><i></i>鞋包</a>
@@ -368,7 +380,7 @@
 
 
                 <!-- 女装 -->
-                <section id="main-stairs-floor1">
+                <section id="main-stairs-floor1" class="main-stairs-floor">
                     <section class="main-floor-title">
                         <img src="img/woman_2ad.png" alt="">
                         <a href="">全部女装品牌<i></i></a>
@@ -494,7 +506,7 @@
 
 
                 <!-- 鞋包 -->
-                <!-- <section id="main-stairs-floor2">
+                <!-- <section id="main-stairs-floor2"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -502,7 +514,7 @@
 
 
                 <!-- 男装 -->
-                <!-- <section id="main-stairs-floor3">
+                <!-- <section id="main-stairs-floor3"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -510,7 +522,7 @@
 
 
                 <!-- 运动 -->
-                <!-- <section id="main-stairs-floor4">
+                <!-- <section id="main-stairs-floor4"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -518,7 +530,7 @@
 
 
                 <!-- 饰品 -->
-                <!-- <section id="main-stairs-floor5">
+                <!-- <section id="main-stairs-floor5"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -527,7 +539,7 @@
 
 
                 <!-- 美妆 -->
-                <!-- <section id="main-stairs-floor6">
+                <!-- <section id="main-stairs-floor6"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -536,7 +548,7 @@
 
 
                 <!-- 母婴 -->
-                <!-- <section id="main-stairs-floor7">
+                <!-- <section id="main-stairs-floor7"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -545,7 +557,7 @@
 
 
                 <!-- 居家 -->
-                <!-- <section id="main-stairs-floor8">
+                <!-- <section id="main-stairs-floor8"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -554,7 +566,7 @@
 
 
                 <!-- 国际 -->
-                <!-- <section id="main-stairs-floor9">
+                <!-- <section id="main-stairs-floor9"> class="main-stairs-floor"
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -563,7 +575,7 @@
 
 
                 <!-- 生活 -->
-                <!-- <section id="main-stairs-floor10">
+                <!-- <section id="main-stairs-floor10" class="main-stairs-floor">
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -572,7 +584,7 @@
 
 
                 <!-- 预告 -->
-                <!-- <section id="main-stairs-floor11">
+                <!-- <section id="main-stairs-floor11" class="main-stairs-floor">
                     <section class="main-floor-title"></section>
                     <section class="main-floor-info"></section>
                     <section class="main-floor-foot"></section>
@@ -714,6 +726,8 @@
         </section>
     </footer>
     <section id="right-nav"></section>
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/js/index.js"></script>
 </body>
 
 </html>

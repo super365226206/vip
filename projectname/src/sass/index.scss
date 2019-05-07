@@ -12,6 +12,10 @@ main {
     background: url(../img/background.jpg) no-repeat top center;
 }
 
+a:hover {
+    color: #f10180;
+}
+
 // 引入各部分css文件
 @import "header-top-nav";
 @import "header-logo";

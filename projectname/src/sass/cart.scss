@@ -4,16 +4,16 @@
     margin: 0 auto;
 }
 
-i,
-em {
-    font-style: normal;
-}
-
 a {
     text-decoration: none;
 }
 
-//商品详情页
-@import "details_main";
+em {
+    font-style: normal;
+}
+
+//购物车
+@import "cart-header";
+@import "cart-main";
 @import "footer_list";
 @import "footer_info";

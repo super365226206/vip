@@ -11,6 +11,10 @@ main {
   background: url(../img/background.jpg) no-repeat top center;
 }
 
+a:hover {
+  color: #f10180;
+}
+
 #top-nav {
   position: relative;
   z-index: 103;
@@ -254,6 +258,21 @@ main {
   display: inline-block;
 }
 
+nav {
+  clear: both;
+  position: relative;
+  width: 100%;
+  height: 43px;
+  line-height: 43px;
+  background-color: #fff;
+  font-size: 14px;
+  color: #fff;
+  z-index: 1000;
+}
+
+#nav .h {
+  color: #f10180;
+}
 #nav ul {
   height: 43px;
   line-height: 43px;
@@ -273,6 +292,11 @@ main {
 #nav ul li:first-child a {
   color: #fff;
 }
+#nav ul li:first-child a img {
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 6px;
+}
 #nav ul li {
   float: left;
   position: relative;
@@ -285,11 +309,39 @@ main {
   font-size: 16px;
   white-space: nowrap;
 }
+#nav ul li .nav-more {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.06);
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 43px;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+#nav ul li .nav-more .nav-more-group {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  height: 43px;
+  border-radius: 4px;
+  vertical-align: top;
+  overflow: hidden;
+}
+#nav ul li .nav-more .nav-more-group a {
+  text-decoration: none;
+  vertical-align: top;
+}
 #nav ul .active {
   cursor: default;
   font-weight: 700;
 }
 #nav ul .active a {
+  color: #f10180;
+}
+
+.h {
   color: #f10180;
 }
 
@@ -331,6 +383,9 @@ main {
   width: 976px;
   height: 340px;
 }
+#banner #banner-pic .banner-pic-align ul li:last-child img {
+  opacity: 0;
+}
 #banner #banner-pic span {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 2px;
@@ -346,9 +401,14 @@ main {
   text-align: center;
   transition: all .3s ease-in;
   font-size: 16px;
+  color: #fff;
+  opacity: .5;
 }
 #banner #banner-pic .banner-right {
-  right: 0px;
+  right: -66px;
+}
+#banner #banner-pic .banner-left {
+  left: -66px;
 }
 #banner #banner-title {
   text-align: center;
@@ -385,6 +445,17 @@ main {
 }
 #banner #banner-title span:last-child::after {
   content: "";
+}
+#banner #banner-title .color {
+  color: #000;
+}
+#banner #banner-bottom {
+  background-color: #e6057d;
+  position: absolute;
+  bottom: -3px;
+  left: 290px;
+  height: 3px;
+  width: 195px;
 }
 
 #main-stairs-must-see {

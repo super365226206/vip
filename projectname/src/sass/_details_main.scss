@@ -64,4 +64,147 @@ main {
             }
         }
     }
+    #details-info {
+        float: right;
+        width: 550px;
+        position: relative;
+        z-index: 100;
+        min-height: 634px;
+        margin-bottom: 40px;
+        margin-top: 40px;
+        #details-goods-title {
+            .goods-title {
+                color: #4d4d4d;
+                margin-bottom: 10px;
+                p {
+                    font-size: 16px;
+                    color: #333;
+                    max-height: 40px;
+                    overflow: hidden;
+                    line-height: 20px;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    font-weight: 700;
+                }
+            }
+        }
+        #details-goods-price {
+            padding-bottom: 10px;
+            .goods-price {
+                color: #fff;
+                background-color: #f10180;
+                background: linear-gradient(to right, #f10180 60%, #fe3b07 100%);
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                height: 48px;
+                line-height: 48px;
+                padding: 0 20px;
+                .goods-slogan {
+                    font-size: 20px;
+                    margin: 3px 10px 0 0;
+                    float: left;
+                    display: inline-block;
+                    max-width: 120px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                i {
+                    font-size: 24px;
+                    float: left;
+                    line-height: 58px;
+                }
+                .goods-cost {
+                    font-size: 38px;
+                    font-family: arial;
+                    max-width: 200px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    float: left;
+                    display: inline-block;
+                }
+            }
+        }
+        #details-goods-button {
+            form {
+                .details-goods-num {
+                    padding: 11px 10px;
+                    position: relative;
+                    height: 30px;
+                    margin: -1px 0 0 -10px;
+                    padding-bottom: 10px;
+                    .num-title {
+                        float: left;
+                        font-size: 12px;
+                        width: 40px;
+                        text-align: left;
+                        color: #999;
+                        line-height: 32px;
+                        overflow: hidden;
+                    }
+                    dd {
+                        float: left;
+                        position: relative;
+                        height: 28px;
+                        border: 1px solid #b3b3b3;
+                        display: inline-block;
+                        width: 73px;
+                        background-color: #fff;
+                        color: #333;
+                        vertical-align: top;
+                        text-align: center;
+                        .details-minus {
+                            float: left;
+                            height: 28px;
+                            width: 21px;
+                            line-height: 28px;
+                            background-color: #f9f8f8;
+                            color: #7d7c7c;
+                        }
+                        .details-num {
+                            float: left;
+                            height: 28px;
+                            width: 29px;
+                            line-height: 28px;
+                            font-size: 12px;
+                            border-left: 1px solid #e4e3e3;
+                            border-right: 1px solid #e4e3e3;
+                            overflow: hidden;
+                        }
+                        .details-add {
+                            float: left;
+                            height: 28px;
+                            width: 21px;
+                            line-height: 28px;
+                            color: #7d7c7c;
+                            background-color: #f9f8f8;
+                        }
+                    }
+                }
+                .details-button {
+                    margin-bottom: 12px;
+                    margin-left: 40px;
+                    margin-top: 20px;
+                    .details-button-group {
+                        height: 46px;
+                        margin-right: 20px;
+                        position: relative;
+                        button {
+                            width: 198px;
+                            height: 46px;
+                            background-color: #f10180;
+                            border: 1px solid #f10180;
+                            span {
+                                font-size: 22px;
+                                font-weight: 400;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
