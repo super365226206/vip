@@ -929,6 +929,9 @@ footer {
   cursor: pointer;
   background: url(../img/footer-iac.png) no-repeat -6px -494px;
 }
+#footer-list dl:last-child {
+  border-right: 0;
+}
 #footer-list dl:last-child dt {
   text-indent: 5px;
 }

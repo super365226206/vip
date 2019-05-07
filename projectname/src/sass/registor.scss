@@ -1,0 +1,10 @@
+@charset "utf-8";
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+//注册页面
+@import "login_header";
+@import "registor_main";
+@import "login_footer";

@@ -195,8 +195,164 @@ main .wrapper .content-info .info-body .info-content .info-content-from .info-in
   float: right;
   cursor: pointer;
 }
+main .wrapper .content-info .info-body .info-content .info-content-from .info-submit {
+  margin-top: 20px;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-submit .submit-from button {
+  margin-top: 4px;
+  width: 298px;
+  height: 44px;
+  background-color: #f10180;
+  border: 1px solid #f10180;
+  display: inline-block;
+  border-radius: 3px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 18px;
+  color: #fff;
+}
 main .wrapper .content-info .info-body .i-hide {
   display: none;
+}
+main .wrapper .content-info .info-foot {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+main .wrapper .content-info .info-foot .info-foot-box {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-wechat::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -30px;
+  z-index: 2;
+  width: 60px;
+  height: 40px;
+  content: '';
+  background-color: #fff;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-wechat {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 12px;
+  height: 40px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-wechat .foot-wechat {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-wechat .foot-wechat a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/login-logo.png);
+  background-position: -308px -161px;
+  display: inline-block;
+  z-index: 3;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-wechat::after {
+  position: absolute;
+  z-index: 1;
+  content: '';
+  top: 20px;
+  left: 0;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-registor {
+  float: right;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-registor a {
+  text-decoration: none;
+  position: relative;
+  z-index: 2;
+  color: #333;
+  line-height: 24px;
+  font-size: 14px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list {
+  font-size: 12px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul {
+  vertical-align: top;
+  display: inline-block;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul li {
+  float: left;
+  position: relative;
+  padding-right: 11px;
+  padding-left: 10px;
+  line-height: 24px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul li a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 0;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul li::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  margin-top: -5px;
+  height: 10px;
+  content: '';
+  border-left: 1px solid #e0e0e0;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul li:last-child::after {
+  border-left: 0;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main a {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  line-height: 24px;
+  color: #999;
+  text-decoration: none;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main .i-hide {
+  display: none;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more {
+  display: none;
+  padding-top: 17px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul {
+  margin-left: -15px;
+  width: 330px;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 10px;
+  width: 63px;
+  vertical-align: top;
+  text-align: center;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li a {
+  color: #333;
+  text-decoration: none;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li::after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  z-index: 1;
+  margin-top: -5px;
+  height: 10px;
+  content: '';
+  border-left: 1px solid #e0e0e0;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li:last-child::after,
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li:nth-child(5)::after {
+  border-left: 0;
 }
 
 footer .wrapper {

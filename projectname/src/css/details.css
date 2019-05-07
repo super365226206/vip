@@ -1,0 +1,217 @@
+.wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+main #details-pic {
+  float: left;
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+main #details-pic #details-pic-box .pic-box-spic {
+  width: 420px;
+  height: 420px;
+  position: relative;
+  z-index: 99;
+  margin-bottom: 7px;
+  background-color: #f7f7f7;
+}
+main #details-pic #details-pic-box .pic-box-list {
+  position: relative;
+  width: 420px;
+  height: 64px;
+  overflow: hidden;
+  text-align: center;
+}
+main #details-pic #details-pic-box .pic-box-list .pic-list-group .pic-list-item {
+  width: 62px;
+  height: 62px;
+  margin: 0 7px 0 0;
+  float: left;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #f2f2f2;
+  background-color: #f7f7f7;
+}
+main #details-pic #details-pic-box .pic-box-list .pic-list-group .pic-list-item img {
+  width: 62px;
+  height: 62px;
+}
+main #details-pic #details-pic-box .pic-box-list .pic-list-group .pic-list-item:last-child {
+  margin-right: 0;
+}
+
+footer {
+  font: 12px/1.5;
+  display: block;
+  clear: both;
+  overflow: hidden;
+  line-height: 22px;
+  padding-top: 0;
+  border-top: 1px solid #ebebeb;
+  background-color: #fcfcfc;
+  color: #4d4d4d;
+}
+
+#footer-classify ul {
+  overflow: hidden;
+}
+#footer-classify ul li {
+  float: left;
+}
+#footer-classify ul li .tooter-pic1 {
+  background-position: 0px;
+}
+#footer-classify ul li .tooter-pic2 {
+  background-position: -80px;
+}
+#footer-classify ul li .tooter-pic3 {
+  background-position: -160px;
+}
+#footer-classify ul li .tooter-pic4 {
+  background-position: -240px;
+}
+#footer-classify ul li .tooter-pic5 {
+  background-position: -320px;
+}
+#footer-classify ul li .tooter-pic6 {
+  background-position: -400px;
+}
+#footer-classify ul li .tooter-pic7 {
+  background-position: -480px;
+}
+#footer-classify ul li .tooter-pic8 {
+  background-position: -560px;
+}
+#footer-classify ul li .tooter-pic9 {
+  background-position: -640px;
+}
+#footer-classify ul li .tooter-pic10 {
+  background-position: -720px;
+}
+#footer-classify ul li i {
+  display: block;
+  margin-top: 30px;
+  margin-right: 28px;
+  margin-left: 10px;
+  width: 58px;
+  height: 75px;
+  font-size: 0;
+  background-image: url(../img/footer_vip.png);
+  background-repeat: no-repeat;
+}
+
+#footer-list {
+  overflow: hidden;
+  margin: 37px 0 25px;
+  line-height: 20px;
+  font-size: 12px;
+}
+#footer-list dl {
+  float: left;
+  width: 145px;
+  height: 146px;
+  padding-left: 16px;
+  border-right: 1px solid #e0e0e0;
+}
+#footer-list dl dt {
+  margin-bottom: 4px;
+  color: #4d4d4d;
+}
+#footer-list dl dd {
+  color: grey;
+  padding-left: 8px;
+  cursor: pointer;
+  background: url(../img/footer-iac.png) no-repeat -6px -494px;
+}
+#footer-list dl:last-child {
+  border-right: 0;
+}
+#footer-list dl:last-child dt {
+  text-indent: 5px;
+}
+#footer-list dl:last-child dd {
+  padding-left: 0px;
+  background: none;
+  color: #4d4d4d;
+}
+
+#footer-info-nav {
+  background-color: #d7237e;
+  line-height: 30px;
+  font-size: 12px;
+  color: white;
+}
+#footer-info-nav ul {
+  overflow: hidden;
+  text-align: center;
+  width: 580px;
+  margin: 0 auto;
+}
+#footer-info-nav ul li {
+  float: left;
+}
+#footer-info-nav ul li a {
+  margin-left: 4px;
+  margin-right: 4px;
+  color: white;
+}
+
+#footer-info-text p {
+  color: #999999;
+  line-height: 19px;
+  margin: 14px 0px;
+  text-align: center;
+  font-size: 12px;
+}
+#footer-info-text p a {
+  color: grey;
+}
+
+#footer-foot {
+  padding: 4px 0px;
+}
+#footer-foot .footer-pic {
+  height: 40px;
+  text-align: center;
+  overflow: hidden;
+}
+#footer-foot .footer-pic i {
+  display: inline-block;
+  margin-right: 9px;
+  height: 40px;
+  background-image: url(../img/footer-iac.png);
+  background-repeat: no-repeat;
+}
+#footer-foot .footer-pic .footer-pic1 {
+  width: 105px;
+  background-position: 0px 0px;
+}
+#footer-foot .footer-pic .footer-pic2 {
+  width: 99px;
+  background-position: 0px -150px;
+}
+#footer-foot .footer-pic .footer-pic3 {
+  width: 66px;
+  background-position: 0px -200px;
+}
+#footer-foot .footer-pic .footer-pic4 {
+  width: 70px;
+  background-position: 0px -250px;
+}
+#footer-foot .footer-pic .footer-pic5 {
+  width: 75px;
+  background-position: 0px -300px;
+}
+#footer-foot .footer-pic .footer-pic6 {
+  width: 76px;
+  background-position: 0px -400px;
+}
+#footer-foot .footer-pic .footer-pic7 {
+  width: 76px;
+  background-position: 0px -450px;
+}
+
+/*# sourceMappingURL=details.css.map */

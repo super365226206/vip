@@ -1,0 +1,10 @@
+@charset "utf-8";
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+//商品详情页
+@import "details_main";
+@import "footer_list";
+@import "footer_info";

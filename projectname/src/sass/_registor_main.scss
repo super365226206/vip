@@ -1,0 +1,206 @@
+@charset "utf-8";
+main {
+    background: url(../img/load.jpg) no-repeat top center;
+    .wrapper {
+        padding: 50px 20px;
+        min-height: 550px;
+        .content-info {
+            width: 360px;
+            border-radius: 2px;
+            background-color: #fff;
+            float: right;
+        }
+        .registor-header {
+            padding-right: 30px;
+            padding-left: 30px;
+            height: 50px;
+            line-height: 50px;
+            border-bottom: 1px solid #e0e0e0;
+            overflow: hidden;
+            h3 {
+                display: inline;
+                font-size: 18px;
+                color: #666;
+            }
+            .registor-login {
+                float: right;
+                font-size: 14px;
+                color: #333;
+                a {
+                    color: #f10180;
+                    text-decoration: none;
+                }
+            }
+        }
+        .registor-body {
+            padding: 30px;
+            .registor-input {
+                text-align: left;
+                form {
+                    .registpr-input-group {
+                        position: relative;
+                        display: inline-block;
+                        vertical-align: top;
+                        .input-tips {
+                            font-size: 12px;
+                            color: #666;
+                            position: relative;
+                            min-height: 19px;
+                            max-height: 36px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin-top: 2px;
+                            margin-bottom: 5px;
+                            line-height: 1.5;
+                            display: block;
+                        }
+                        .user-phone {
+                            input {
+                                padding-left: 40px;
+                                width: 248px;
+                                height: 32px;
+                                line-height: 32px;
+                                border: 1px solid #d2c2d2;
+                                position: relative;
+                            }
+                            .input-pic {
+                                background-image: url(../img/login-logo.png);
+                                background-position: -420px -161px;
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                top: 10px;
+                                left: 11px;
+                                z-index: 1;
+                                display: inline-block;
+                            }
+                        }
+                        .user-code {
+                            input {
+                                padding-left: 40px;
+                                height: 32px;
+                                width: 106px;
+                                margin-right: 10px;
+                                line-height: 32px;
+                                border: 1px solid #d2c2d2;
+                                position: relative;
+                            }
+                            a {
+                                text-decoration: none;
+                                display: inline-block;
+                                padding: 0 12px;
+                                width: 106px;
+                                font-size: 14px;
+                                height: 32px;
+                                line-height: 32px;
+                                text-align: center;
+                                border: 1px solid #d0d0d0;
+                                color: #999;
+                                background: #d0d0d0;
+                                cursor: not-allowed;
+                                border-radius: 3px;
+                            }
+                            .input-pic {
+                                background-image: url(../img/login-logo.png);
+                                background-position: -420px -161px;
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                position: absolute;
+                                top: 10px;
+                                left: 11px;
+                                z-index: 1;
+                            }
+                        }
+                        .user-password {
+                            input {
+                                padding-left: 40px;
+                                width: 248px;
+                                height: 32px;
+                                line-height: 32px;
+                                border: 1px solid #d2c2d2;
+                                position: relative;
+                            }
+                            .input-pic {
+                                background-image: url(../img/login-logo.png);
+                                background-position: -420px -161px;
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                position: absolute;
+                                top: 10px;
+                                left: 11px;
+                                z-index: 1;
+                            }
+                        }
+                        .user-secpass {
+                            input {
+                                padding-left: 40px;
+                                width: 248px;
+                                height: 32px;
+                                line-height: 32px;
+                                border: 1px solid #d2c2d2;
+                                position: relative;
+                            }
+                            .input-pic {
+                                background-image: url(../img/login-logo.png);
+                                background-position: -420px -161px;
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                position: absolute;
+                                top: 10px;
+                                left: 11px;
+                                z-index: 1;
+                            }
+                        }
+                        .user-check {
+                            overflow: hidden;
+                            .check-info {
+                                width: 19px;
+                                float: left;
+                                label {
+                                    display: block;
+                                    background-image: url(../img/checkbox.png);
+                                    background-position: -48px 0;
+                                    width: 19px;
+                                    height: 16px;
+                                    cursor: pointer;
+                                }
+                            }
+                            label {
+                                float: left;
+                                vertical-align: middle;
+                                font-size: 12px;
+                                display: inline-block;
+                                width: 276px;
+                                line-height: 1.5;
+                                a {
+                                    text-decoration: none;
+                                    color: #1d94d1;
+                                }
+                            }
+                        }
+                    }
+                    .registor-submit {
+                        margin-bottom: 30px;
+                        .submit {
+                            font-size: 16px;
+                            width: 298px;
+                            height: 40px;
+                            line-height: 40px;
+                            margin-top: 4px;
+                            display: inline-block;
+                            text-decoration: none;
+                            text-align: center;
+                            background-color: #f10180;
+                            border: 1px solid #f10180;
+                            color: #fff;
+                            span {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

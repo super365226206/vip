@@ -153,7 +153,6 @@ main {
                                             cursor: pointer;
                                         }
                                     }
-                                    label {}
                                 }
                                 .info-checkbox-right {
                                     float: right;
@@ -161,10 +160,171 @@ main {
                                 }
                             }
                         }
+                        .info-submit {
+                            margin-top: 20px;
+                            .submit-from {
+                                button {
+                                    margin-top: 4px;
+                                    width: 298px;
+                                    height: 44px;
+                                    background-color: #f10180;
+                                    border: 1px solid #f10180;
+                                    display: inline-block;
+                                    border-radius: 3px;
+                                    text-align: center;
+                                    vertical-align: top;
+                                    font-size: 18px;
+                                    color: #fff;
+                                    span {}
+                                }
+                            }
+                        }
                     }
                 }
                 .i-hide {
                     display: none;
+                }
+            }
+            .info-foot {
+                padding-right: 30px;
+                padding-left: 30px;
+                .info-foot-box {
+                    position: relative;
+                    padding-top: 30px;
+                    padding-bottom: 15px;
+                    .info-foot-wechat::before {
+                        position: absolute;
+                        top: 0;
+                        left: 50%;
+                        margin-left: -30px;
+                        z-index: 2;
+                        width: 60px;
+                        height: 40px;
+                        content: '';
+                        background-color: #fff;
+                    }
+                    .info-foot-wechat {
+                        position: relative;
+                        z-index: 1;
+                        margin-bottom: 12px;
+                        height: 40px;
+                        .foot-wechat {
+                            position: relative;
+                            z-index: 2;
+                            margin: 0 auto;
+                            width: 40px;
+                            height: 40px;
+                            a {
+                                display: inline-block;
+                                width: 40px;
+                                height: 40px;
+                                background-image: url(../img/login-logo.png);
+                                background-position: -308px -161px;
+                                display: inline-block;
+                                z-index: 3;
+                            }
+                        }
+                    }
+                    .info-foot-wechat::after {
+                        position: absolute;
+                        z-index: 1;
+                        content: '';
+                        top: 20px;
+                        left: 0;
+                        width: 100%;
+                        border-top: 1px solid #e0e0e0;
+                    }
+                    .info-foot-registor {
+                        float: right;
+                        a {
+                            text-decoration: none;
+                            position: relative;
+                            z-index: 2;
+                            color: #333;
+                            line-height: 24px;
+                            font-size: 14px;
+                        }
+                    }
+                    .info-foot-list {
+                        font-size: 12px;
+                        .foot-list-main {
+                            ul {
+                                vertical-align: top;
+                                display: inline-block;
+                                li {
+                                    float: left;
+                                    position: relative;
+                                    padding-right: 11px;
+                                    padding-left: 10px;
+                                    line-height: 24px;
+                                    a {
+                                        color: #333;
+                                        text-decoration: none;
+                                        margin-left: 0;
+                                    }
+                                }
+                                li::after {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    z-index: 1;
+                                    margin-top: -5px;
+                                    height: 10px;
+                                    content: '';
+                                    border-left: 1px solid #e0e0e0;
+                                }
+                                li:last-child::after {
+                                    border-left: 0;
+                                }
+                            }
+                            a {
+                                display: inline-block;
+                                margin-left: 20px;
+                                vertical-align: top;
+                                line-height: 24px;
+                                color: #999;
+                                text-decoration: none;
+                            }
+                            .i-hide {
+                                display: none;
+                            }
+                        }
+                        .foot-list-more {
+                            display: none;
+                            padding-top: 17px;
+                            ul {
+                                margin-left: -15px;
+                                width: 330px;
+                                li {
+                                    display: inline-block;
+                                    position: relative;
+                                    z-index: 2;
+                                    margin-bottom: 10px;
+                                    width: 63px;
+                                    vertical-align: top;
+                                    text-align: center;
+                                    a {
+                                        color: #333;
+                                        text-decoration: none;
+                                    }
+                                }
+                                li::after {
+                                    position: absolute;
+                                    top: 50%;
+                                    right: 0;
+                                    z-index: 1;
+                                    margin-top: -5px;
+                                    height: 10px;
+                                    content: '';
+                                    border-left: 1px solid #e0e0e0;
+                                }
+                                li:last-child::after,
+                                li:nth-child(5)::after {
+                                    border-left: 0;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
