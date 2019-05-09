@@ -37,8 +37,14 @@
                     _this.nav.css({
                         'top': 0
                     })
+                    _this.nav.css({
+                        'box-shadow': '0 1px 3px 0 #a7a7a7'
+                    })
                 } else {
                     _this.nav.css({ 'position': 'relative' })
+                    _this.nav.css({
+                        'box-shadow': 'none'
+                    })
                 }
             })
         }
@@ -187,11 +193,12 @@
             this.main_stairs_li.on('click', function() { //点击左侧导航栏
                 //$(this).index（） 当前点击楼梯的索引
                 $(this).addClass('active-click').siblings().removeClass('active-click'); //当前的元素添加类，除当前元素外的其他的元素移除类；
-                var $top = _this.main_stairs_floor.eq($(this).index()).offset().top; //获取当前主题内容元素的Top值
+                var $top = _this.main_stairs_floor.eq($(this).index()).offset().top - 40; //获取当前主题内容元素的Top值
                 $('html,body').animate({ //赋值要注意内部的属性
                     scrollTop: $top //将当前主题内容元素的Top值赋给滚动条
-                })
+                }, 0.1)
             })
+
 
         }
     }
@@ -234,11 +241,12 @@
 (function() {
     class floor_screen {
         constructor() {
-            this.floor_img = $('.floor-info-details img');
+            this.floor_img = $('.main-floor-info');
+            console.log(this.floor_img.find('img'))
         }
         init() {
             let _this = this;
-            this.floor_img.hover(function() {
+            this.floor_img.find('img').hover(function() {
                 $(this).animate({ 'opacity': '0.6' })
             }, function() {
                 $(this).animate({ 'opacity': '1' })
@@ -261,26 +269,40 @@
             }).done(function(data) {
                 // var $html = '<ul>';
                 console.log(data);
+                let $html = "";
+
                 $.each(data, function(index, value) {
-                    // console.log(data);
-                    this.main_floor_info.html(
+
+                    $html +=
                         `
-                        <section class="floor-info-details">
-                        <a href="http://localhost/projectname/src/details.html">
-                            <img src="https://c.vpimg1.com/upcb/2019/04/30/190/ias_155659524279088_570x273_90.jpg" alt="">
+                    <section class="floor-info-details">
+                        <a href="http://localhost/projectname/src/details.html?sid=${value.sid}">
+                            <img class="lazy" data-original="${value.url}" width="490" height="235" alt="${value.title}">
                             <section class="floor-details-title">
-                                <span class="discount"><span>0.4</span>折起</span>
-                                <span class="title">美之藤M.TENG女装专场</span>
+                                <span class="discount"><span>${value.count}</span>折起</span>
+                                <span class="title">${value.title}</span>
                                 <section class="count-down">
                                     <i></i>
-                                    <span>剩3天</span>
+                                    <span>剩${value.time}天</span>
                                 </section>
                             </section>
                         </a>
                     </section>
-                        `
-                    )
+                    `
+
+
+                    // value[index].html($html);
+                    // console.log(value)
+
                 });
+                _this.main_floor_info.html($html);
+
+                $(function() {
+                    $("img.lazy").lazyload({
+                        effect: "fadeIn"
+                    });
+                });
+
                 // $.each(data, function(index, value) {
                 //     $html += `
                 //         <li>

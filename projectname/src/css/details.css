@@ -18,6 +18,9 @@ main #details-pic {
   margin-bottom: 40px;
   margin-top: 40px;
 }
+main #details-pic #details-pic-box {
+  position: relative;
+}
 main #details-pic #details-pic-box .pic-box-spic {
   width: 420px;
   height: 420px;
@@ -26,12 +29,43 @@ main #details-pic #details-pic-box .pic-box-spic {
   margin-bottom: 7px;
   background-color: #f7f7f7;
 }
+main #details-pic #details-pic-box .pic-box-spic .pic-box-sf {
+  width: 50px;
+  height: 50px;
+  background: orange;
+  opacity: 0.3;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  visibility: hidden;
+}
+main #details-pic #details-pic-box .pic-box-bf {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #000;
+  overflow: hidden;
+  position: absolute;
+  left: 430px;
+  top: 0;
+  visibility: hidden;
+  z-index: 200;
+}
+main #details-pic #details-pic-box .pic-box-bf .pic-box-bpic {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 800px;
+  height: 800px;
+}
 main #details-pic #details-pic-box .pic-box-list {
   position: relative;
   width: 420px;
   height: 64px;
   overflow: hidden;
   text-align: center;
+}
+main #details-pic #details-pic-box .pic-box-list .pic-list-group {
+  display: inline-block;
 }
 main #details-pic #details-pic-box .pic-box-list .pic-list-group .pic-list-item {
   width: 62px;
@@ -113,14 +147,14 @@ main #details-info #details-goods-price .goods-price .goods-cost {
   float: left;
   display: inline-block;
 }
-main #details-info #details-goods-button form .details-goods-num {
+main #details-info #details-goods-button .details-goods-num {
   padding: 11px 10px;
   position: relative;
   height: 30px;
   margin: -1px 0 0 -10px;
   padding-bottom: 10px;
 }
-main #details-info #details-goods-button form .details-goods-num .num-title {
+main #details-info #details-goods-button .details-goods-num .num-title {
   float: left;
   font-size: 12px;
   width: 40px;
@@ -129,7 +163,7 @@ main #details-info #details-goods-button form .details-goods-num .num-title {
   line-height: 32px;
   overflow: hidden;
 }
-main #details-info #details-goods-button form .details-goods-num dd {
+main #details-info #details-goods-button .details-goods-num dd {
   float: left;
   position: relative;
   height: 28px;
@@ -141,7 +175,7 @@ main #details-info #details-goods-button form .details-goods-num dd {
   vertical-align: top;
   text-align: center;
 }
-main #details-info #details-goods-button form .details-goods-num dd .details-minus {
+main #details-info #details-goods-button .details-goods-num dd .details-minus {
   float: left;
   height: 28px;
   width: 21px;
@@ -149,7 +183,7 @@ main #details-info #details-goods-button form .details-goods-num dd .details-min
   background-color: #f9f8f8;
   color: #7d7c7c;
 }
-main #details-info #details-goods-button form .details-goods-num dd .details-num {
+main #details-info #details-goods-button .details-goods-num dd .details-num {
   float: left;
   height: 28px;
   width: 29px;
@@ -159,7 +193,7 @@ main #details-info #details-goods-button form .details-goods-num dd .details-num
   border-right: 1px solid #e4e3e3;
   overflow: hidden;
 }
-main #details-info #details-goods-button form .details-goods-num dd .details-add {
+main #details-info #details-goods-button .details-goods-num dd .details-add {
   float: left;
   height: 28px;
   width: 21px;
@@ -167,26 +201,30 @@ main #details-info #details-goods-button form .details-goods-num dd .details-add
   color: #7d7c7c;
   background-color: #f9f8f8;
 }
-main #details-info #details-goods-button form .details-button {
+main #details-info #details-goods-button .details-button {
   margin-bottom: 12px;
   margin-left: 40px;
   margin-top: 20px;
 }
-main #details-info #details-goods-button form .details-button .details-button-group {
+main #details-info #details-goods-button .details-button .details-button-group {
   height: 46px;
   margin-right: 20px;
   position: relative;
 }
-main #details-info #details-goods-button form .details-button .details-button-group button {
+main #details-info #details-goods-button .details-button .details-button-group a {
   width: 198px;
   height: 46px;
+  display: block;
   background-color: #f10180;
   border: 1px solid #f10180;
-}
-main #details-info #details-goods-button form .details-button .details-button-group button span {
+  border-radius: 3px;
+  color: #f10180;
+  position: relative;
   font-size: 22px;
   font-weight: 400;
   color: #fff;
+  text-align: center;
+  line-height: 46px;
 }
 
 footer {

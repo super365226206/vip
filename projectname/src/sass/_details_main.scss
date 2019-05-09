@@ -27,6 +27,7 @@ main {
         margin-bottom: 40px;
         margin-top: 40px;
         #details-pic-box {
+            position: relative;
             .pic-box-spic {
                 width: 420px;
                 height: 420px;
@@ -34,6 +35,34 @@ main {
                 z-index: 99;
                 margin-bottom: 7px;
                 background-color: #f7f7f7;
+                .pic-box-sf {
+                    width: 50px;
+                    height: 50px;
+                    background: orange;
+                    opacity: 0.3;
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    visibility: hidden;
+                }
+            }
+            .pic-box-bf {
+                width: 400px;
+                height: 500px;
+                border: 1px solid #000;
+                overflow: hidden;
+                position: absolute;
+                left: 430px;
+                top: 0;
+                visibility: hidden;
+                z-index: 200;
+                .pic-box-bpic {
+                    position: absolute;
+                    left: 0px;
+                    top: 0px;
+                    width: 800px;
+                    height: 800px;
+                }
             }
             .pic-box-list {
                 position: relative;
@@ -42,6 +71,8 @@ main {
                 overflow: hidden;
                 text-align: center;
                 .pic-list-group {
+                    display: inline-block;
+                    // margin: 0 auto;
                     .pic-list-item {
                         width: 62px;
                         height: 62px;
@@ -128,80 +159,83 @@ main {
             }
         }
         #details-goods-button {
-            form {
-                .details-goods-num {
-                    padding: 11px 10px;
+            .details-goods-num {
+                padding: 11px 10px;
+                position: relative;
+                height: 30px;
+                margin: -1px 0 0 -10px;
+                padding-bottom: 10px;
+                .num-title {
+                    float: left;
+                    font-size: 12px;
+                    width: 40px;
+                    text-align: left;
+                    color: #999;
+                    line-height: 32px;
+                    overflow: hidden;
+                }
+                dd {
+                    float: left;
                     position: relative;
-                    height: 30px;
-                    margin: -1px 0 0 -10px;
-                    padding-bottom: 10px;
-                    .num-title {
+                    height: 28px;
+                    border: 1px solid #b3b3b3;
+                    display: inline-block;
+                    width: 73px;
+                    background-color: #fff;
+                    color: #333;
+                    vertical-align: top;
+                    text-align: center;
+                    .details-minus {
                         float: left;
+                        height: 28px;
+                        width: 21px;
+                        line-height: 28px;
+                        background-color: #f9f8f8;
+                        color: #7d7c7c;
+                    }
+                    .details-num {
+                        float: left;
+                        height: 28px;
+                        width: 29px;
+                        line-height: 28px;
                         font-size: 12px;
-                        width: 40px;
-                        text-align: left;
-                        color: #999;
-                        line-height: 32px;
+                        border-left: 1px solid #e4e3e3;
+                        border-right: 1px solid #e4e3e3;
                         overflow: hidden;
                     }
-                    dd {
+                    .details-add {
                         float: left;
-                        position: relative;
                         height: 28px;
-                        border: 1px solid #b3b3b3;
-                        display: inline-block;
-                        width: 73px;
-                        background-color: #fff;
-                        color: #333;
-                        vertical-align: top;
-                        text-align: center;
-                        .details-minus {
-                            float: left;
-                            height: 28px;
-                            width: 21px;
-                            line-height: 28px;
-                            background-color: #f9f8f8;
-                            color: #7d7c7c;
-                        }
-                        .details-num {
-                            float: left;
-                            height: 28px;
-                            width: 29px;
-                            line-height: 28px;
-                            font-size: 12px;
-                            border-left: 1px solid #e4e3e3;
-                            border-right: 1px solid #e4e3e3;
-                            overflow: hidden;
-                        }
-                        .details-add {
-                            float: left;
-                            height: 28px;
-                            width: 21px;
-                            line-height: 28px;
-                            color: #7d7c7c;
-                            background-color: #f9f8f8;
-                        }
+                        width: 21px;
+                        line-height: 28px;
+                        color: #7d7c7c;
+                        background-color: #f9f8f8;
                     }
                 }
-                .details-button {
-                    margin-bottom: 12px;
-                    margin-left: 40px;
-                    margin-top: 20px;
-                    .details-button-group {
+            }
+            .details-button {
+                margin-bottom: 12px;
+                margin-left: 40px;
+                margin-top: 20px;
+                .details-button-group {
+                    height: 46px;
+                    margin-right: 20px;
+                    position: relative;
+                    input {}
+                    a {
+                        width: 198px;
                         height: 46px;
-                        margin-right: 20px;
+                        display: block;
+                        background-color: #f10180;
+                        border: 1px solid #f10180;
+                        border-radius: 3px;
+                        color: #f10180;
                         position: relative;
-                        button {
-                            width: 198px;
-                            height: 46px;
-                            background-color: #f10180;
-                            border: 1px solid #f10180;
-                            span {
-                                font-size: 22px;
-                                font-weight: 400;
-                                color: #fff;
-                            }
-                        }
+                        font-size: 22px;
+                        font-weight: 400;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 46px;
                     }
                 }
             }

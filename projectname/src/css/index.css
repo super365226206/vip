@@ -816,6 +816,10 @@ nav {
 .main-floor-info .floor-info-details img {
   width: 490px;
   height: 235px;
+  transition: all 1s;
+}
+.main-floor-info .floor-info-details img:hover {
+  opacity: 0.6;
 }
 .main-floor-info .floor-info-details .floor-details-title {
   position: relative;

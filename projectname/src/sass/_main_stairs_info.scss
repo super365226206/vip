@@ -49,6 +49,10 @@
         img {
             width: 490px;
             height: 235px;
+            transition: all 1s;
+            &:hover {
+                opacity: 0.6;
+            }
         }
         // .floor-details-screen {
         //     position: absolute;

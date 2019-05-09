@@ -4,6 +4,24 @@ main {
     .wrapper {}
 }
 
+.empty-cart {
+    display: none;
+    height: 98px;
+    padding: 80px 0 60px;
+    color: #333;
+    .empty-cart-msg {
+        height: 98px;
+        line-height: 20px;
+        font-size: 14px;
+        padding-left: 341px;
+        padding-top: 25px;
+        a {
+            display: block;
+            color: #005ea7;
+        }
+    }
+}
+
 #cart-content {
     #cart-title-tab {
         border-bottom: 1px solid #d0d0d0;
@@ -138,58 +156,123 @@ main {
                                     .goods-int {
                                         padding-left: 10px;
                                         width: 273px;
+                                        .goods-items {
+                                            padding-left: 73px;
+                                            .goods-items-pic {
+                                                float: left;
+                                                margin-left: -73px;
+                                                width: 58px;
+                                                height: 74px;
+                                                border-color: #f0f0f0;
+                                                position: relative;
+                                                a {
+                                                    img {
+                                                        display: block;
+                                                        overflow: hidden;
+                                                        width: 58px;
+                                                        height: 74px;
+                                                    }
+                                                }
+                                            }
+                                            .goods-items-title {
+                                                float: left;
+                                                margin-bottom: 5px;
+                                                width: 180px;
+                                                max-height: 32px;
+                                                overflow: hidden;
+                                                font-weight: 400;
+                                                line-height: 16px;
+                                                word-break: break-all;
+                                                word-wrap: break-word;
+                                                overflow: hidden;
+                                                span {
+                                                    display: inline-block;
+                                                    margin-right: 5px;
+                                                    padding-right: 5px;
+                                                    height: 10px;
+                                                    line-height: 10px;
+                                                    border-right: 1px solid #d0d0d0;
+                                                    font-size: 12px;
+                                                    color: #f10180;
+                                                }
+                                                a {}
+                                            }
+                                        }
                                     }
                                     .goods-price {
                                         width: 300px;
                                         text-align: center;
+                                        .cost-items {
+                                            display: block;
+                                            color: #333;
+                                            position: relative;
+                                            span {
+                                                padding: 0 2px;
+                                            }
+                                            strong {
+                                                font-size: 14px;
+                                                font-weight: bold
+                                            }
+                                        }
                                     }
                                     .goods-num {
                                         width: 100px;
-                                        // dd {
-                                        //     height: 28px;
-                                        //     border: 1px solid #b3b3b3;
-                                        //     display: inline-block;
-                                        //     width: 73px;
-                                        //     background-color: #fff;
-                                        //     color: #333;
-                                        //     vertical-align: top;
-                                        //     text-align: center;
-                                        //     display: inline-block;
-                                        //     .details-minus {
-                                        //         float: left;
-                                        //         height: 28px;
-                                        //         width: 21px;
-                                        //         line-height: 28px;
-                                        //         background-color: #f9f8f8;
-                                        //         color: #7d7c7c;
-                                        //     }
-                                        //     .details-num {
-                                        //         float: left;
-                                        //         height: 28px;
-                                        //         width: 29px;
-                                        //         line-height: 28px;
-                                        //         font-size: 12px;
-                                        //         border-left: 1px solid #e4e3e3;
-                                        //         border-right: 1px solid #e4e3e3;
-                                        //         overflow: hidden;
-                                        //     }
-                                        //     .details-add {
-                                        //         float: left;
-                                        //         height: 28px;
-                                        //         width: 21px;
-                                        //         line-height: 28px;
-                                        //         color: #7d7c7c;
-                                        //         background-color: #f9f8f8;
-                                        //     }
-                                        // }
+                                        dd {
+                                            height: 28px;
+                                            border: 1px solid #b3b3b3;
+                                            display: inline-block;
+                                            width: 73px;
+                                            background-color: #fff;
+                                            color: #333;
+                                            vertical-align: top;
+                                            text-align: center;
+                                            display: inline-block;
+                                            .details-minus {
+                                                float: left;
+                                                height: 28px;
+                                                width: 21px;
+                                                line-height: 28px;
+                                                background-color: #f9f8f8;
+                                                color: #7d7c7c;
+                                            }
+                                            .details-num {
+                                                float: left;
+                                                height: 28px;
+                                                width: 29px;
+                                                line-height: 28px;
+                                                font-size: 12px;
+                                                border-left: 1px solid #e4e3e3;
+                                                border-right: 1px solid #e4e3e3;
+                                                overflow: hidden;
+                                            }
+                                            .details-add {
+                                                float: left;
+                                                height: 28px;
+                                                width: 21px;
+                                                line-height: 28px;
+                                                color: #7d7c7c;
+                                                background-color: #f9f8f8;
+                                            }
+                                        }
                                     }
                                     .goods-sub {
                                         width: 145px;
                                         text-align: center;
+                                        .sub-items {
+                                            display: block;
+                                            color: #f10180;
+                                            span {
+                                                padding: 0 2px;
+                                            }
+                                            strong {
+                                                font-size: 14px;
+                                                font-weight: bold
+                                            }
+                                        }
                                     }
                                     .goods-oper {
-                                        width: 100px;
                                         text-align: center;
+                                        width: 100px;
                                     }
                                 }
                             }

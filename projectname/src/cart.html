@@ -52,6 +52,7 @@
     </header>
     <main>
         <section class="wrapper">
+
             <section id="cart-content">
                 <section id="cart-title-tab">
                     <a href="">
@@ -79,16 +80,44 @@
                                 <section class="goods-content-inner">
                                     <table>
                                         <tbody>
-                                            <tr>
-                                                <td class="goods-int"></td>
-                                                <td class="goods-price"></td>
-                                                <td class="goods-num"></td>
-                                                <td class="goods-sub">
+                                            <section class="empty-cart">
+                                                <section class="empty-cart-msg">
+                                                    购物车空空的哦~，去看看心仪的商品吧~
+                                                    <a href="http://localhost/projectname/src/index123.html">去购物></a>
+                                                </section>
+                                            </section>
+                                            <tr class="goods-inner" style="display:none">
+                                                <td class="goods-int">
+                                                    <section class="goods-items">
+                                                        <section class="goods-items-pic">
+                                                            <a href="">
+                                                                <img src="" alt="">
+                                                            </a>
+                                                        </section>
+                                                        <section class="goods-items-title">
+                                                            <span>自营</span>
+                                                            <a href="">2019春夏新款时尚简约通勤镂空绣花淑女气质纯色小长袖连衣裙</a>
+                                                        </section>
+                                                    </section>
+                                                </td>
+                                                <td class="goods-price">
+                                                    <section class="cost-items">
+                                                        <span>￥</span>
+                                                        <strong></strong>
+                                                    </section>
+                                                </td>
+                                                <td class="goods-num">
                                                     <dd>
                                                         <a href="" class="details-minus">-</a>
                                                         <em class="details-num">1</em>
                                                         <a href="" class="details-add">+</a>
                                                     </dd>
+                                                </td>
+                                                <td class="goods-sub">
+                                                    <section class="sub-items">
+                                                        <span>￥</span>
+                                                        <strong></strong>
+                                                    </section>
                                                 </td>
                                                 <td class="goods-oper"><a href="">删除</a></td>
                                             </tr>
@@ -170,6 +199,9 @@
             </section>
         </section>
     </footer>
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/thirdplugins/cookie.js"></script>
+    <script src="script/js/cart.js"></script>
 </body>
 
 </html>

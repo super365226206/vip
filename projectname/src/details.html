@@ -16,24 +16,15 @@
             <!-- 产品图片介绍 -->
             <section id="details-pic">
                 <section id="details-pic-box">
-                    <section class="pic-box-spic"></section>
+                    <section class="pic-box-spic" id="spic">
+                        <img src="" alt="" id="smallpic">
+                        <section class="pic-box-sf" id="sf"></section>
+                    </section>
+                    <section class="pic-box-bf" id="bf">
+                        <img src="" alt="" id="bpic" class="pic-box-bpic">
+                    </section>
                     <section class="pic-box-list">
                         <section class="pic-list-group">
-                            <section class="pic-list-item">
-                                <img src="" alt="">
-                            </section>
-                            <section class="pic-list-item">
-                                <img src="" alt="">
-                            </section>
-                            <section class="pic-list-item">
-                                <img src="" alt="">
-                            </section>
-                            <section class="pic-list-item">
-                                <img src="" alt="">
-                            </section>
-                            <section class="pic-list-item">
-                                <img src="" alt="">
-                            </section>
                             <section class="pic-list-item">
                                 <img src="" alt="">
                             </section>
@@ -55,23 +46,19 @@
                     </section>
                 </section>
                 <section id="details-goods-button">
-                    <form action="">
-                        <dl class="details-goods-num">
-                            <dt class="num-title">数量</dt>
-                            <dd>
-                                <a href="" class="details-minus">-</a>
-                                <em class="details-num">1</em>
-                                <a href="" class="details-add">+</a>
-                            </dd>
-                        </dl>
-                        <section class="details-button">
-                            <section class="details-button-group">
-                                <button>
-                                    <span>加入购物袋</span>
-                                </button>
-                            </section>
+                    <dl class="details-goods-num">
+                        <dt class="num-title">数量</dt>
+                        <dd>
+                            <a href="" class="details-minus">-</a>
+                            <em class="details-num">1</em>
+                            <a href="" class="details-add">+</a>
+                        </dd>
+                    </dl>
+                    <section class="details-button">
+                        <section class="details-button-group">
+                            <a href="##" class="p-btn" id="count">加入购物袋</a>
                         </section>
-                    </form>
+                    </section>
                 </section>
             </section>
         </section>
@@ -199,6 +186,10 @@
             </section>
         </section>
     </footer>
+    <script src="script/thirdplugins/jquery.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/thirdplugins/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/thirdplugins/cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script/js/details.js" type="text/javascript" charset="utf-8"></script>
 </body>
 
 </html>
