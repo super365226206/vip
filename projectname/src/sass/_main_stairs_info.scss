@@ -31,6 +31,10 @@
     }
 }
 
+.main-floor-title a:hover {
+    color: #f10180;
+}
+
 .main-floor-info {
     .floor-info-details {
         display: inline-block;
@@ -46,6 +50,21 @@
             width: 490px;
             height: 235px;
         }
+        // .floor-details-screen {
+        //     position: absolute;
+        //     top: 0;
+        //     left: 0;
+        //     background: rgba(255, 255, 255, .6);
+        //     height: 235px;
+        //     line-height: 30px;
+        //     width: 365px;
+        //     padding: 0 100px 0 25px;
+        //     overflow: hidden;
+        //     text-overflow: ellipsis;
+        //     white-space: nowrap;
+        //     color: #fff;
+        //     display: none;
+        // }
         .floor-details-title {
             position: relative;
             padding: 0 120px 0 10px;
@@ -106,5 +125,8 @@
         text-align: center;
         line-height: 44px;
         margin: -1px auto 20px;
+    }
+    a:hover {
+        background-color: #f43499;
     }
 }

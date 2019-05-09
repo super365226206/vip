@@ -184,7 +184,7 @@ main {
                     }
                     .registor-submit {
                         margin-bottom: 30px;
-                        .submit {
+                        input {
                             font-size: 16px;
                             width: 298px;
                             height: 40px;
@@ -196,7 +196,11 @@ main {
                             background-color: #f10180;
                             border: 1px solid #f10180;
                             color: #fff;
+                            cursor: pointer;
                             span {}
+                        }
+                        input:hover {
+                            background-color: #f43499
                         }
                     }
                 }

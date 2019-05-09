@@ -402,6 +402,10 @@ footer {
   cursor: pointer;
   background: url(../img/footer-iac.png) no-repeat -6px -494px;
 }
+#footer-list dl dd:hover {
+  background-position: -6px -513px;
+  color: #f10180;
+}
 #footer-list dl:last-child {
   border-right: 0;
 }
@@ -434,6 +438,9 @@ footer {
   margin-right: 4px;
   color: white;
 }
+#footer-info-nav ul li a:hover {
+  color: #ccc;
+}
 
 #footer-info-text p {
   color: #999999;
@@ -444,6 +451,9 @@ footer {
 }
 #footer-info-text p a {
   color: grey;
+}
+#footer-info-text p a:hover {
+  color: #f10180;
 }
 
 #footer-foot {

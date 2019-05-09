@@ -63,6 +63,9 @@ main .wrapper .content-info .info-body .info-nav .info-nav-content {
   overflow: hidden;
   position: relative;
 }
+main .wrapper .content-info .info-body .info-nav .info-nav-content:hover {
+  color: #f10180;
+}
 main .wrapper .content-info .info-body .info-nav .info-nav-content:first-child::after {
   position: absolute;
   top: 15px;
@@ -198,7 +201,7 @@ main .wrapper .content-info .info-body .info-content .info-content-from .info-in
 main .wrapper .content-info .info-body .info-content .info-content-from .info-submit {
   margin-top: 20px;
 }
-main .wrapper .content-info .info-body .info-content .info-content-from .info-submit .submit-from button {
+main .wrapper .content-info .info-body .info-content .info-content-from .info-submit .submit-from input {
   margin-top: 4px;
   width: 298px;
   height: 44px;
@@ -210,6 +213,10 @@ main .wrapper .content-info .info-body .info-content .info-content-from .info-su
   vertical-align: top;
   font-size: 18px;
   color: #fff;
+  cursor: pointer;
+}
+main .wrapper .content-info .info-body .info-content .info-content-from .info-submit .submit-from input:hover {
+  background-color: #f43499;
 }
 main .wrapper .content-info .info-body .i-hide {
   display: none;
@@ -295,6 +302,9 @@ main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list
   text-decoration: none;
   margin-left: 0;
 }
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul li a:hover {
+  color: #f10180;
+}
 main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main ul li::after {
   position: absolute;
   top: 50%;
@@ -315,6 +325,9 @@ main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list
   line-height: 24px;
   color: #999;
   text-decoration: none;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main a:hover {
+  color: #333;
 }
 main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-main .i-hide {
   display: none;
@@ -339,6 +352,9 @@ main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list
 main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li a {
   color: #333;
   text-decoration: none;
+}
+main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li a:hover {
+  color: #f10180;
 }
 main .wrapper .content-info .info-foot .info-foot-box .info-foot-list .foot-list-more ul li::after {
   position: absolute;

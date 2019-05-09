@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>唯品会网站登录</title>
+    <link rel="dns-prefetch" href="//s2.vipstatic.com">
+    <link rel="dns-prefetch" href="//a.vpimg1.com">
+    <link rel="dns-prefetch" href="//c.vpimg1.com">
+    <link rel="dns-prefetch" href="//d.vpimg1.com">
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" href="css/reset.css">
+
 </head>
 
 <body>
@@ -26,6 +31,7 @@
                     <section class="info-body">
                         <section class="info-nav">
                             <section class="info-nav-content login-active">扫码登录</section>
+
                             <section class="info-nav-content">账户登录</section>
                         </section>
                         <section class="info-content">
@@ -42,7 +48,7 @@
                             <section class="info-content-from">
                                 <section class="info-input">
                                     <section class="input-group">
-                                        <input type="text" placeholder="手机号/用户名/邮箱">
+                                        <input id="phone" name="phone" type="text" placeholder="手机号/用户名/邮箱">
                                         <span class="input-pic"></span>
                                         <span></span>
                                         <span></span>
@@ -53,7 +59,7 @@
                                 </section>
                                 <section class="info-input">
                                     <section class="input-group">
-                                        <input type="password" placeholder="密码">
+                                        <input id="password" name="password" type="password" placeholder="密码">
                                         <span class="input-pic"></span>
                                         <span></span>
                                         <span></span>
@@ -76,9 +82,7 @@
                                 </section>
                                 <section class="info-submit">
                                     <section class="submit-from">
-                                        <button type="submit">
-                                            <span>登录</span>
-                                        </button>
+                                        <input type="button" name="submit" value=" 登录  " id="btn" />
                                     </section>
                                 </section>
                             </section>
@@ -92,7 +96,7 @@
                                 </section>
                             </section>
                             <section class="info-foot-registor">
-                                <a href="">免费注册</a>
+                                <a href="http://localhost/projectname/src/registor.html">免费注册</a>
                             </section>
                             <section class="info-foot-list">
                                 <section class="foot-list-main">
@@ -101,7 +105,7 @@
                                         <li><a href="">QQ</a></li>
                                         <li><a href="">支付宝</a></li>
                                     </ul>
-                                    <a href="">
+                                    <a href="javascript:;" class="list-main-more">
                                         <span>更多</span>
                                         <span class="i-hide">收起</span>
                                     </a>
@@ -128,6 +132,8 @@
             <section class="footer-info">Copyright 2008-2019 vip.com，All Rights Reserved ICP证：粤 B2-20080329</section>
         </section>
     </footer>
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/js/login.js"></script>
 </body>
 
 </html>

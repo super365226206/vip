@@ -3,7 +3,7 @@
     class nav_hover {
         constructor() {
             this.nav_li_list = $('#nav ul li').not('#nav ul li:first');
-            console.log(this.nav_li_list.length)
+            // console.log(this.nav_li_list.length)
         }
         init() {
             let _this = this;
@@ -26,7 +26,7 @@
     class nav_position {
         constructor() {
             this.nav = $('nav');
-            console.log(this.nav.offset().top);
+            // console.log(this.nav.offset().top);
         }
         init() {
             let _this = this;
@@ -151,7 +151,7 @@
         }
         init() {
             let _this = this;
-            console.log(this.main_stairs_floor)
+            // console.log(this.main_stairs_floor)
             $(window).on('scroll', function() {
                 var $top = $(window).scrollTop(); //获取当前window下滚动条的Top值
                 if ($top >= 1400) {
@@ -172,8 +172,8 @@
 
                 _this.main_stairs_floor.each(function(index, element) { //each遍历当前元素，获取每个匹配的元素
                     let $loucengTop = $(element).offset().top; //获取到每个楼层的top值
-                    console.log($loucengTop + 1400);
-                    console.log($top)
+                    // console.log($loucengTop + 1400);
+                    // console.log($top)
                     if ($loucengTop + 1400 > $top) {
                         _this.main_stairs_li.find('a').removeClass('active-click'); //每次触发事件时，移除所有active类名
                         _this.main_stairs_li.eq(index).find('a').addClass('active-click'); //当满足条件时，给当前li元素添加类名
@@ -192,6 +192,7 @@
                     scrollTop: $top //将当前主题内容元素的Top值赋给滚动条
                 })
             })
+
         }
     }
     new left_stairs().init();
@@ -203,24 +204,98 @@
             this.nav_more_group = $('.nav-more-group');
             this.nav_lastli = $('.nav_lastli');
             this.nav_more = $('.nav-more')
-            console.log(this.nav_more)
+                // console.log(this.nav_more)
         }
         init() {
             let _this = this;
             this.nav_lastli.hover(function() {
-                _this.nav_more.show();
-                // _this.nav_more_group.each(function(index, element) {
-                //     _this.nav_more_group.eq(index).children('a').addClass("h").siblings().removeClass('h')
-                // })
-                console.log(_this.nav_more_group.length)
-                for (let i = 0; i < _this.nav_more_group.length; i++) {
-                    _this.nav_more_group.eq(i).find('a').addClass('h').siblings().removeClass('h')
-                    console.log(i)
-                }
-            }, function() {
-                _this.nav_more.hide();
-            })
+                    _this.nav_more.show();
+                    // _this.nav_more_group.each(function(index, element) {
+                    //     _this.nav_more_group.eq(index).children('a').addClass("h").siblings().removeClass('h')
+                    // })
+                    // console.log(_this.nav_more_group.length)
+
+
+                }, function() {
+                    _this.nav_more.hide();
+                })
+                // this.nav_more_group.each(function(index, element) {
+                // _this.nav_more_group.hover(function() {
+                //     _this.nav_more_group.find('a').addClass('h');
+                //     _this.nav_more_group.index().siblings().find('a').removeClass('h');
+                // }, function() {})
+
+            // })
         }
     }
     new hover_color().init();
+})();
+
+(function() {
+    class floor_screen {
+        constructor() {
+            this.floor_img = $('.floor-info-details img');
+        }
+        init() {
+            let _this = this;
+            this.floor_img.hover(function() {
+                $(this).animate({ 'opacity': '0.6' })
+            }, function() {
+                $(this).animate({ 'opacity': '1' })
+            })
+        }
+    }
+    new floor_screen().init();
+})();
+(function() {
+    class main_info {
+        constructor() {
+            this.main_floor_info = $('.main-floor-info');
+            console.log(this.main_floor_info.length)
+        }
+        init() {
+            let _this = this;
+            $.ajax({
+                url: '../php/vipdata.php',
+                dataType: 'json'
+            }).done(function(data) {
+                // var $html = '<ul>';
+                console.log(data);
+                $.each(data, function(index, value) {
+                    // console.log(data);
+                    this.main_floor_info.html(
+                        `
+                        <section class="floor-info-details">
+                        <a href="http://localhost/projectname/src/details.html">
+                            <img src="https://c.vpimg1.com/upcb/2019/04/30/190/ias_155659524279088_570x273_90.jpg" alt="">
+                            <section class="floor-details-title">
+                                <span class="discount"><span>0.4</span>折起</span>
+                                <span class="title">美之藤M.TENG女装专场</span>
+                                <section class="count-down">
+                                    <i></i>
+                                    <span>剩3天</span>
+                                </section>
+                            </section>
+                        </a>
+                    </section>
+                        `
+                    )
+                });
+                // $.each(data, function(index, value) {
+                //     $html += `
+                //         <li>
+                //             <a href="details.html?sid=${value.sid}" target="_blank">
+                //                 <img src="${value.url}" />
+                //                 <h4>${value.titile}</h4>
+                //                 <p>¥${value.price}</p>
+                //             </a>
+                //         </li>
+                //     `;
+                // });
+                // $html += '</ul>';
+                // $('.goodslist').html($html);
+            });
+        }
+    }
+    new main_info().init();
 })();

@@ -17,6 +17,9 @@
                 margin-right: 4px;
                 color: rgb(255, 255, 255);
             }
+            a:hover {
+                color: #ccc;
+            }
         }
     }
 }
@@ -30,6 +33,9 @@
         font-size: 12px;
         a {
             color: grey;
+        }
+        a:hover {
+            color: #f10180
         }
     }
 }

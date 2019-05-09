@@ -26,6 +26,9 @@ main {
                         overflow: hidden;
                         position: relative;
                     }
+                    .info-nav-content:hover {
+                        color: #f10180;
+                    }
                     .info-nav-content:first-child::after {
                         position: absolute;
                         top: 15px;
@@ -163,7 +166,7 @@ main {
                         .info-submit {
                             margin-top: 20px;
                             .submit-from {
-                                button {
+                                input {
                                     margin-top: 4px;
                                     width: 298px;
                                     height: 44px;
@@ -175,7 +178,11 @@ main {
                                     vertical-align: top;
                                     font-size: 18px;
                                     color: #fff;
+                                    cursor: pointer;
                                     span {}
+                                }
+                                input:hover {
+                                    background-color: #f43499
                                 }
                             }
                         }
@@ -262,6 +269,9 @@ main {
                                         text-decoration: none;
                                         margin-left: 0;
                                     }
+                                    a:hover {
+                                        color: #f10180;
+                                    }
                                 }
                                 li::after {
                                     position: absolute;
@@ -285,6 +295,9 @@ main {
                                 color: #999;
                                 text-decoration: none;
                             }
+                            a:hover {
+                                color: #333;
+                            }
                             .i-hide {
                                 display: none;
                             }
@@ -306,6 +319,9 @@ main {
                                     a {
                                         color: #333;
                                         text-decoration: none;
+                                    }
+                                    a:hover {
+                                        color: #f10180;
                                     }
                                 }
                                 li::after {

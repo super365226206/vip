@@ -57,6 +57,10 @@ footer {
             cursor: pointer;
             background: url(../img/footer-iac.png) no-repeat -6px -494px;
         }
+        dd:hover {
+            background-position: -6px -513px;
+            color: #f10180;
+        }
     }
     dl:last-child {
         border-right: 0;

@@ -212,7 +212,7 @@ main .wrapper .registor-body .registor-input form .registpr-input-group .user-ch
 main .wrapper .registor-body .registor-input form .registor-submit {
   margin-bottom: 30px;
 }
-main .wrapper .registor-body .registor-input form .registor-submit .submit {
+main .wrapper .registor-body .registor-input form .registor-submit input {
   font-size: 16px;
   width: 298px;
   height: 40px;
@@ -224,6 +224,10 @@ main .wrapper .registor-body .registor-input form .registor-submit .submit {
   background-color: #f10180;
   border: 1px solid #f10180;
   color: #fff;
+  cursor: pointer;
+}
+main .wrapper .registor-body .registor-input form .registor-submit input:hover {
+  background-color: #f43499;
 }
 
 footer .wrapper {

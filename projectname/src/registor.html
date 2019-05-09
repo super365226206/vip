@@ -31,16 +31,16 @@
                     </section>
                     <section class="registor-body">
                         <section class="registor-input">
-                            <form action="">
+                            <form action="../php/reg.php" method="post" id="form1">
                                 <section class="registpr-input-group">
                                     <section class="user-phone">
-                                        <input type="text" name="" id="" placeholder="请输入手机号">
+                                        <input type="text" name="phone" id="phone" placeholder="请输入手机号">
                                         <span class="input-pic"></span>
                                         <span></span>
                                         <span></span>
                                     </section>
                                     <section class="input-tips">
-                                        <span></span>
+                                        <label id="phone-error" class="error" for="phone"></label>
                                     </section>
                                 </section>
                                 <section class="registpr-input-group">
@@ -57,24 +57,24 @@
                                 </section>
                                 <section class="registpr-input-group">
                                     <section class="user-password">
-                                        <input type="text" name="" id="" placeholder="密码由6-20位字母，数字和符号组合">
+                                        <input type="password" name="password" id="password" placeholder="密码由6-20位字母，数字和符号组合">
                                         <span class="input-pic"></span>
                                         <span></span>
                                         <span></span>
                                     </section>
                                     <section class="input-tips">
-                                        <span></span>
+                                        <label id="password-error" class="error" for="password"></label>
                                     </section>
                                 </section>
                                 <section class="registpr-input-group">
                                     <section class="user-secpass">
-                                        <input type="text" name="" id="" placeholder="请再次输入上面密码">
+                                        <input type="password" name="repass" id="repass" placeholder="请再次输入上面密码">
                                         <span class="input-pic"></span>
                                         <span></span>
                                         <span></span>
                                     </section>
                                     <section class="input-tips">
-                                        <span></span>
+                                        <label id="repass-error" class="error" for="repass"></label>
                                     </section>
                                 </section>
                                 <section class="registpr-input-group">
@@ -93,9 +93,7 @@
                                     </section>
                                 </section>
                                 <section class="registor-submit">
-                                    <a href="" class="submit">
-                                        <span>立即注册</span>
-                                    </a>
+                                    <input type="submit" value="注册" name="submit" />
                                 </section>
                             </form>
                         </section>
@@ -109,6 +107,9 @@
             <section class="footer-info">Copyright 2008-2019 vip.com，All Rights Reserved ICP证：粤 B2-20080329</section>
         </section>
     </footer>
+    <script src="script/thirdplugins/jquery.js"></script>
+    <script src="script/thirdplugins/jquery.validate.js"></script>
+    <script src="script/js/registor.js"></script>
 </body>
 
 </html>
