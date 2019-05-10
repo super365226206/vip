@@ -2,7 +2,7 @@
 (function() {
     class nav_hover {
         constructor() {
-            this.nav_li_list = $('#nav ul li').not('#nav ul li:first');
+            this.nav_li_list = $('#nav .nav-fir-group li').not('#nav ul li:first');
             // console.log(this.nav_li_list.length)
         }
         init() {
@@ -11,12 +11,18 @@
             //     _this.nav_li_list.eq(index).find('a').css({ 'color': '#f10180' })
             // })
             this.nav_li_list.hover(function() {
-                var index = $(this).index() - 1;
-                _this.nav_li_list.eq(index).children('a').addClass("h")
+                let index = $(this).index() - 1;
+                _this.over(index);
             }, function() {
-                var index = $(this).index() - 1;
-                _this.nav_li_list.eq(index).children('a').removeClass("h")
+                let index = $(this).index() - 1;
+                _this.out(index);
             })
+        }
+        over(index) {
+            this.nav_li_list.eq(index).children('a').addClass("h")
+        }
+        out(index) {
+            this.nav_li_list.eq(index).children('a').removeClass("h")
         }
     }
     new nav_hover().init();
@@ -31,22 +37,25 @@
         init() {
             let _this = this;
             $(window).on('scroll', function() {
-                var $top = $(window).scrollTop();
-                if ($top > 150) {
-                    _this.nav.css({ 'position': 'fixed' })
-                    _this.nav.css({
-                        'top': 0
-                    })
-                    _this.nav.css({
-                        'box-shadow': '0 1px 3px 0 #a7a7a7'
-                    })
-                } else {
-                    _this.nav.css({ 'position': 'relative' })
-                    _this.nav.css({
-                        'box-shadow': 'none'
-                    })
-                }
+                _this.scroll();
             })
+        }
+        scroll() {
+            let $top = $(window).scrollTop();
+            if ($top > 150) {
+                this.nav.css({ 'position': 'fixed' })
+                this.nav.css({
+                    'top': 0
+                })
+                this.nav.css({
+                    'box-shadow': '0 1px 3px 0 #a7a7a7'
+                })
+            } else {
+                this.nav.css({ 'position': 'relative' })
+                this.nav.css({
+                    'box-shadow': 'none'
+                })
+            }
         }
     }
     new nav_position().init();
@@ -67,82 +76,89 @@
         init() {
             let _this = this;
             this.banner_pic.hover(function() {
-                _this.banner_left.css({
-                    'left': 0
-                })
-                _this.banner_right.css({
-                    'right': 0
-                })
+                _this.over();
 
             }, function() {
-                _this.banner_left.css({
-                    'left': -66
-                })
-                _this.banner_right.css({
-                    'right': -66
-                })
+                _this.out();
             })
             this.banner_title.on('mouseover', function() {
                 let index = $(this).index();
-                // console.log(index)
-                _this.banner_title.eq(index).addClass("color").siblings().removeClass("color");
-                for (let i = 0; i < _this.banner_pic_img.length; i++) {
-                    _this.banner_pic_img.eq(i).stop(true).animate({ 'opacity': 0 })
-                }
-                _this.banner_pic_img.eq(index).stop(true).animate({ 'opacity': 1 })
-                if (index == 0) {
-                    _this.banner_bottom.stop(true).animate({
-                        left: 290
-                    })
-                } else {
-                    _this.banner_bottom.stop(true).animate({
-                        left: 490
-                    })
-                }
+                _this.mouseover(index);
             })
             this.banner_right.on('click', function() {
-                _this.num++;
-                _this.banner_title.eq(_this.num).addClass("color").siblings().removeClass("color");
-                for (let i = 0; i < _this.banner_pic_img.length; i++) {
-                    _this.banner_pic_img.eq(i).stop(true).animate({ 'opacity': 0 })
-                }
-                _this.banner_pic_img.eq(_this.num).stop(true).animate({ 'opacity': 1 })
-                if (_this.num == 0) {
-                    _this.banner_bottom.stop(true).animate({
-                        left: 290
-                    })
-                } else {
-                    _this.banner_bottom.stop(true).animate({
-                        left: 490
-                    })
-                }
-
-                if (_this.num >= 1) {
-                    _this.num = -1;
-                }
+                _this.rightclick();
             })
             this.banner_left.on('click', function() {
-                // console.log(_this.num)
-                _this.num--;
-                _this.banner_title.eq(_this.num).addClass("color").siblings().removeClass("color");
-                for (let i = 0; i < _this.banner_pic_img.length; i++) {
-                    _this.banner_pic_img.eq(i).stop(true).animate({ 'opacity': 0 })
-                }
-                _this.banner_pic_img.eq(_this.num).stop(true).animate({ 'opacity': 1 })
-                if (_this.num == 0) {
-                    _this.banner_bottom.stop(true).animate({
-                        left: 290
-                    })
-                } else {
-                    _this.banner_bottom.stop(true).animate({
-                        left: 490
-                    })
-                }
-
-                if (_this.num < 0) {
-                    _this.num = 1;
-                }
+                _this.leftclick();
             })
+        }
+        over() {
+            this.banner_left.css({
+                'left': 0
+            })
+            this.banner_right.css({
+                'right': 0
+            })
+        }
+        out() {
+            this.banner_left.css({
+                'left': -66
+            })
+            this.banner_right.css({
+                'right': -66
+            })
+        }
+        mouseover(index) {
+            // console.log(index)
+            let _this = this;
+            this.banner_title.eq(index).addClass("color").siblings().removeClass("color");
+            this.banner_pic_img.eq(index).stop(true).animate({ 'opacity': 1 }).parent().parent().siblings().find("img").stop(true).animate({ 'opacity': 0 })
+            if (index == 0) {
+                this.banner_bottom.stop(true).animate({
+                    left: 290
+                })
+            } else {
+                this.banner_bottom.stop(true).animate({
+                    left: 490
+                })
+            }
+        }
+        rightclick() {
+            this.num++;
+            this.banner_title.eq(this.num).addClass("color").siblings().removeClass("color");
+            this.banner_pic_img.eq(this.num).stop(true).animate({ 'opacity': 1 }).parent().parent().siblings().find("img").stop(true).animate({ 'opacity': 0 })
+            if (this.num == 0) {
+                this.banner_bottom.stop(true).animate({
+                    left: 290
+                })
+            } else {
+                this.banner_bottom.stop(true).animate({
+                    left: 490
+                })
+            }
+
+            if (this.num >= 1) {
+                this.num = -1;
+            }
+        }
+        leftclick() {
+            // console.log(_this.num)
+            this.num--;
+            this.banner_title.eq(this.num).addClass("color").siblings().removeClass("color");
+            this.banner_pic_img.eq(this.num).stop(true).animate({ 'opacity': 1 }).parent().parent().siblings().find("img").stop(true).animate({ 'opacity': 0 })
+            if (this.num == 0) {
+                this.banner_bottom.stop(true).animate({
+                    left: 290
+                })
+            } else {
+                this.banner_bottom.stop(true).animate({
+                    left: 490
+                })
+            }
+
+            if (this.num < 0) {
+                this.num = 1;
+            }
         }
     }
     new banner().init();
@@ -159,47 +175,49 @@
             let _this = this;
             // console.log(this.main_stairs_floor)
             $(window).on('scroll', function() {
-                var $top = $(window).scrollTop(); //获取当前window下滚动条的Top值
-                if ($top >= 1400) {
-                    _this.main_stairs_nav.css({
-                            'position': 'fixed',
-                            top: 112
-                        }) //当滚动条Top值大于等于800时，左侧导航栏显示
-                } else {
-                    _this.main_stairs_nav.css({
-                        'position': 'absolute',
-                        top: 100
-                    })
-                }
-
-
-                //拖动滚动条，根据滚动条的距离，给对应的楼梯添加类名；
-                //楼层的top值和滚动条距离进行比较
-
-                _this.main_stairs_floor.each(function(index, element) { //each遍历当前元素，获取每个匹配的元素
-                    let $loucengTop = $(element).offset().top; //获取到每个楼层的top值
-                    // console.log($loucengTop + 1400);
-                    // console.log($top)
-                    if ($loucengTop + 1400 > $top) {
-                        _this.main_stairs_li.find('a').removeClass('active-click'); //每次触发事件时，移除所有active类名
-                        _this.main_stairs_li.eq(index).find('a').addClass('active-click'); //当满足条件时，给当前li元素添加类名
-                        return false; //满足条件，终止循环
-                    }
-                })
-
-
-
+                _this.scroll();
             })
             this.main_stairs_li.on('click', function() { //点击左侧导航栏
-                //$(this).index（） 当前点击楼梯的索引
-                $(this).addClass('active-click').siblings().removeClass('active-click'); //当前的元素添加类，除当前元素外的其他的元素移除类；
-                var $top = _this.main_stairs_floor.eq($(this).index()).offset().top - 40; //获取当前主题内容元素的Top值
-                $('html,body').animate({ //赋值要注意内部的属性
-                    scrollTop: $top //将当前主题内容元素的Top值赋给滚动条
-                }, 0.1)
+                let this_index = $(this)
+                _this.click(this_index);
+                // console.log($(this));
             })
-
-
+        }
+        scroll() {
+            let _this = this;
+            let $top = $(window).scrollTop(); //获取当前window下滚动条的Top值
+            if ($top >= 1400) {
+                this.main_stairs_nav.css({
+                    position: 'fixed',
+                    top: 112
+                })
+            } else {
+                this.main_stairs_nav.css({
+                    'position': 'absolute',
+                    top: 100
+                })
+            }
+            //拖动滚动条，根据滚动条的距离，给对应的楼梯添加类名；
+            //楼层的top值和滚动条距离进行比较
+            this.main_stairs_floor.each(function(index, element) { //each遍历当前元素，获取每个匹配的元素
+                let $loucengTop = $(element).offset().top; //获取到每个楼层的top值
+                // console.log($loucengTop + 1400);
+                // console.log($top)
+                if ($loucengTop + 1400 > $top) {
+                    _this.main_stairs_li.find('a').removeClass('active-click'); //每次触发事件时，移除所有active类名
+                    _this.main_stairs_li.eq(index).find('a').addClass('active-click'); //当满足条件时，给当前li元素添加类名
+                    return false; //满足条件，终止循环
+                }
+            })
+        }
+        click(this_index) {
+            //$(this).index（） 当前点击楼梯的索引
+            // console.log(index)
+            this_index.addClass('active-click').siblings().removeClass('active-click'); //当前的元素添加类，除当前元素外的其他的元素移除类；
+            let $top = this.main_stairs_floor.eq(this_index.index()).offset().top - 40; //获取当前主题内容元素的Top值
+            $('html,body').animate({ //赋值要注意内部的属性
+                scrollTop: $top //将当前主题内容元素的Top值赋给滚动条
+            }, 0.1)
         }
     }
     new left_stairs().init();
@@ -216,7 +234,7 @@
         init() {
             let _this = this;
             this.nav_lastli.hover(function() {
-                    _this.nav_more.show();
+                    _this.over();
                     // _this.nav_more_group.each(function(index, element) {
                     //     _this.nav_more_group.eq(index).children('a').addClass("h").siblings().removeClass('h')
                     // })
@@ -224,7 +242,7 @@
 
 
                 }, function() {
-                    _this.nav_more.hide();
+                    _this.out();
                 })
                 // this.nav_more_group.each(function(index, element) {
                 // _this.nav_more_group.hover(function() {
@@ -233,6 +251,12 @@
                 // }, function() {})
 
             // })
+        }
+        over() {
+            this.nav_more.show();
+        }
+        out() {
+            this.nav_more.hide();
         }
     }
     new hover_color().init();
@@ -267,7 +291,7 @@
                 url: '../php/vipdata.php',
                 dataType: 'json'
             }).done(function(data) {
-                // var $html = '<ul>';
+                // let $html = '<ul>';
                 console.log(data);
                 let $html = "";
 
@@ -303,21 +327,83 @@
                     });
                 });
 
-                // $.each(data, function(index, value) {
-                //     $html += `
-                //         <li>
-                //             <a href="details.html?sid=${value.sid}" target="_blank">
-                //                 <img src="${value.url}" />
-                //                 <h4>${value.titile}</h4>
-                //                 <p>¥${value.price}</p>
-                //             </a>
-                //         </li>
-                //     `;
-                // });
-                // $html += '</ul>';
-                // $('.goodslist').html($html);
+
             });
         }
     }
     new main_info().init();
+})();
+(function() {
+    if (getcookie('UserName')) {
+        $('.nav-login').hide();
+        $('.nav-registor').hide();
+        $('.nav-exit').show()
+        $('.nav-username').show().find('span').html('你好,' + getcookie('UserName'));
+    }
+    $('.admin a').on('click', function() {
+        delcookie('UserName', '', -1);
+        $('.admin').hide();
+        $('.login').show();
+    });
+})();
+(function() {
+    class click_close {
+        constructor() {
+            this.nav_exit = $('.nav-exit');
+            this.nav_username = $('.nav-username');
+            this.nav_registor = $('.nav-registor');
+            this.nav_login = $('.nav-login');
+        }
+        init() {
+            let _this = this;
+            this.nav_exit.on('click', function() {
+                _this.click();
+            })
+        }
+        click() {
+            this.nav_exit.css({ display: 'none' });
+            console.log($(this))
+            this.nav_username.css({ display: 'none' });
+            this.nav_registor.css({ display: 'block' });
+            this.nav_login.css({ display: 'block' });
+        }
+    }
+    new click_close().init();
+})();
+(function() {
+    class sec_nav {
+        constructor() {
+            this.fir_group_first = $('.fir-group-first');
+            this.nav_sec_group = $('.nav-sec-group');
+            this.sec_group_more = $('.sec-group-more');
+            console.log(this.nav_sec_group)
+        }
+        init() {
+            let _this = this;
+            this.fir_group_first.hover(function() {
+                _this.secover();
+            }, function() {
+                _this.secout();
+            })
+            this.nav_sec_group.find('li').hover(function() {
+                _this.tirover();
+            }, function() {
+                _this.tirout();
+            })
+        }
+        secover() {
+            console.log(this.nav_sec_group)
+            this.nav_sec_group.css({ display: 'block' })
+        }
+        secout() {
+            this.nav_sec_group.css({ display: 'none' })
+        }
+        tirover() {
+            this.sec_group_more.css({ display: 'block' })
+        }
+        tirout() {
+            this.sec_group_more.css({ display: 'none' })
+        }
+    }
+    new sec_nav().init();
 })();

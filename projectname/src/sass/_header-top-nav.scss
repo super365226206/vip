@@ -90,6 +90,18 @@
                     z-index: 1;
                     content: '';
                 }
+                .nav-login {
+                    display: block
+                }
+                .nav-registor {
+                    display: block
+                }
+                .nav-username {
+                    display: none
+                }
+                .nav-exit {
+                    display: none
+                }
             }
             //给除了登录注册按钮，别的按钮设置样式
             .top-right-li {
@@ -98,6 +110,7 @@
                 padding-left: 13px;
                 padding-right: 20px;
                 text-align: center;
+                position: relative;
                 i {
                     display: inline-block;
                     margin-left: 3px;
@@ -129,10 +142,56 @@
                     margin-top: -3px;
                     vertical-align: middle;
                 }
+                .top-nav-item {
+                    position: absolute;
+                    z-index: 20;
+                    border: 1px solid #cdcdcd;
+                    background-color: #fff;
+                    color: #333;
+                    text-align: left;
+                    padding: 0 10px 10px 0;
+                    width: 89px;
+                    top: 0;
+                    left: -7px;
+                    display: none;
+                    i {
+                        width: 89px;
+                        left: -1px;
+                        background-color: #fff;
+                        height: 27px;
+                        top: -27px;
+                        border-top: 0;
+                        margin-left: 0;
+                        line-height: 27px;
+                        text-align: left;
+                        font-style: normal;
+                        box-sizing: border-box;
+                        padding-left: 15px;
+                    }
+                    span {
+                        padding-left: 20px;
+                        margin: 5px 0;
+                        width: 100%;
+                        display: block;
+                        a {
+                            color: #333;
+                        }
+                    }
+                    a:hover,
+                    i:hover {
+                        color: #f10180;
+                    }
+                }
+            }
+            .top-right-li:hover .top-nav-item {
+                display: block;
             }
             .top-right-li:last-child::after,
             li:first-child::after {
                 background: none;
+            }
+            li:hover a {
+                color: #f10180;
             }
         }
     }

@@ -99,12 +99,25 @@ a:hover {
   z-index: 1;
   content: '';
 }
+#top-nav #top-nav-right ul .registor .nav-login {
+  display: block;
+}
+#top-nav #top-nav-right ul .registor .nav-registor {
+  display: block;
+}
+#top-nav #top-nav-right ul .registor .nav-username {
+  display: none;
+}
+#top-nav #top-nav-right ul .registor .nav-exit {
+  display: none;
+}
 #top-nav #top-nav-right ul .top-right-li {
   z-index: 11;
   height: 26px;
   padding-left: 13px;
   padding-right: 20px;
   text-align: center;
+  position: relative;
 }
 #top-nav #top-nav-right ul .top-right-li i {
   display: inline-block;
@@ -137,9 +150,55 @@ a:hover {
   margin-top: -3px;
   vertical-align: middle;
 }
+#top-nav #top-nav-right ul .top-right-li .top-nav-item {
+  position: absolute;
+  z-index: 20;
+  border: 1px solid #cdcdcd;
+  background-color: #fff;
+  color: #333;
+  text-align: left;
+  padding: 0 10px 10px 0;
+  width: 89px;
+  top: 0;
+  left: -7px;
+  display: none;
+}
+#top-nav #top-nav-right ul .top-right-li .top-nav-item i {
+  width: 89px;
+  left: -1px;
+  background-color: #fff;
+  height: 27px;
+  top: -27px;
+  border-top: 0;
+  margin-left: 0;
+  line-height: 27px;
+  text-align: left;
+  font-style: normal;
+  box-sizing: border-box;
+  padding-left: 15px;
+}
+#top-nav #top-nav-right ul .top-right-li .top-nav-item span {
+  padding-left: 20px;
+  margin: 5px 0;
+  width: 100%;
+  display: block;
+}
+#top-nav #top-nav-right ul .top-right-li .top-nav-item span a {
+  color: #333;
+}
+#top-nav #top-nav-right ul .top-right-li .top-nav-item a:hover,
+#top-nav #top-nav-right ul .top-right-li .top-nav-item i:hover {
+  color: #f10180;
+}
+#top-nav #top-nav-right ul .top-right-li:hover .top-nav-item {
+  display: block;
+}
 #top-nav #top-nav-right ul .top-right-li:last-child::after,
 #top-nav #top-nav-right ul li:first-child::after {
   background: none;
+}
+#top-nav #top-nav-right ul li:hover a {
+  color: #f10180;
 }
 
 #top-logo {
@@ -270,6 +329,9 @@ nav {
   z-index: 1000;
 }
 
+#nav {
+  position: relative;
+}
 #nav .h {
   color: #f10180;
 }
@@ -343,6 +405,104 @@ nav {
 }
 #nav ul .active a {
   color: #f10180;
+}
+#nav .nav-sec-group {
+  display: none;
+  position: absolute;
+}
+#nav .nav-sec-group ul {
+  width: 176px;
+  background-color: #f10180;
+  transition: .2s linear;
+  padding: 0 0 1px;
+  box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.1);
+}
+#nav .nav-sec-group ul li {
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+  white-space: nowrap;
+  background-color: #f10180;
+  width: 156px;
+  height: auto;
+  margin-right: 20px;
+}
+#nav .nav-sec-group ul li:hover {
+  background-color: #fff;
+  color: #f10180;
+}
+#nav .sec-group-more {
+  display: none;
+  background-color: #fff;
+  position: absolute;
+  left: 176px;
+  top: 0;
+  width: 844px;
+  height: 495px;
+  box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.1);
+}
+#nav .sec-group-more .group-list-item {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+#nav .sec-group-more .group-list-item .list-item-info {
+  float: left;
+  width: 567px;
+  margin: 4px 36px 16px 36px;
+  height: 491px;
+  overflow: hidden;
+}
+#nav .sec-group-more .group-list-item .list-item-info dl {
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding: 5px 0;
+  font-size: 12px;
+}
+#nav .sec-group-more .group-list-item .list-item-info dl dt {
+  line-height: 22px;
+  position: absolute;
+  left: 0;
+  width: 86px;
+  color: #222;
+  overflow: hidden;
+}
+#nav .sec-group-more .group-list-item .list-item-info dl dt span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 76px;
+  display: inline-block;
+  color: #222;
+}
+#nav .sec-group-more .group-list-item .list-item-info dl dd {
+  line-height: 22px;
+  width: 471px;
+  margin-left: 96px;
+  overflow: hidden;
+  word-break: keep-all;
+}
+#nav .sec-group-more .group-list-item .list-item-info dl dd a {
+  color: #666;
+  margin-right: 10px;
+}
+#nav .sec-group-more .group-list-item .list-item-info dl dd a:hover {
+  color: #f10180;
+}
+#nav .sec-group-more .group-list-item .list-item-pic {
+  float: left;
+}
+#nav .sec-group-more .group-list-item .list-item-pic .item-pic {
+  width: 205px;
+  height: 495px;
+}
+#nav .sec-group-more .group-list-item .list-item-pic .item-pic a img {
+  height: 495px;
 }
 
 .h {
