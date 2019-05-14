@@ -40,6 +40,9 @@ nav {
                 color: #fff;
             }
         }
+        li:first-child:hover .nav-sec-group {
+            display: block;
+        }
         li {
             float: left;
             position: relative;

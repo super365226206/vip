@@ -300,7 +300,7 @@
                     $html +=
                         `
                     <section class="floor-info-details">
-                        <a href="http://localhost/projectname/src/details.html?sid=${value.sid}">
+                        <a href="http://10.31.163.68/projectname/src/details.html?sid=${value.sid}">
                             <img class="lazy" data-original="${value.url}" width="490" height="235" alt="${value.title}">
                             <section class="floor-details-title">
                                 <span class="discount"><span>${value.count}</span>折起</span>
@@ -376,23 +376,23 @@
             this.fir_group_first = $('.fir-group-first');
             this.nav_sec_group = $('.nav-sec-group');
             this.sec_group_more = $('.sec-group-more');
-            console.log(this.nav_sec_group)
         }
         init() {
             let _this = this;
             this.fir_group_first.hover(function() {
                 _this.secover();
-            }, function() {
-                _this.secout();
             })
             this.nav_sec_group.find('li').hover(function() {
                 _this.tirover();
-            }, function() {
+            })
+            this.nav_sec_group.on('mouseleave', function() {
+                _this.secout();
+            })
+            this.sec_group_more.on('mouseleave', function() {
                 _this.tirout();
             })
         }
         secover() {
-            console.log(this.nav_sec_group)
             this.nav_sec_group.css({ display: 'block' })
         }
         secout() {
@@ -406,4 +406,61 @@
         }
     }
     new sec_nav().init();
+})();
+
+(function() {
+    class right_nav {
+        constructor() {
+            this.right_nav_li = $('.right-nav-cont li').not('.my-cart');
+            this.right_nav_foot = $('.right-nav-foot section');
+            this.my_cart = $('.my-cart');
+            this.my_cart_info = $('.my-cart-info');
+            this.back_top = $('.back-top');
+        }
+        init() {
+            let _this = this;
+            this.right_nav_li.hover(function() {
+                _this.conover(this);
+            }, function() {
+                _this.conout(this)
+            })
+            this.right_nav_foot.hover(function() {
+                _this.conover(this);
+            }, function() {
+                _this.conout(this)
+            })
+            this.my_cart.on('click', function() {
+                _this.click();
+            })
+            this.my_cart_info.on('mouseleave', function() {
+                _this.iclick();
+            })
+            this.my_cart_info.find('i').on('click', function() {
+                _this.iclick();
+            })
+            this.back_top.on('click', function() {
+                _this.topclick();
+            })
+        }
+        conover(m) {
+            $(m).find('i').css({ 'background-color': '#df147f' })
+            $(m).find('a').css({ 'background-color': '#df147f' })
+            $(m).find('p').css({ 'right': '37px' })
+        }
+        conout(m) {
+            $(m).find('i').css({ 'background-color': '#262626' })
+            $(m).find('a').css({ 'background-color': '#262626' })
+            $(m).find('p').css({ 'right': '-120px' })
+        }
+        click() {
+            this.my_cart_info.css({ 'right': '37px' })
+        }
+        iclick() {
+            this.my_cart_info.css({ 'right': '-300px' })
+        }
+        topclick() {
+            window.scrollX = 0;
+        }
+    }
+    new right_nav().init();
 })();

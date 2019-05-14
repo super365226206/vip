@@ -12,6 +12,9 @@ a {
   text-decoration: none;
 }
 
+main {
+  border-top: 2px solid #ebebeb;
+}
 main #details-pic {
   float: left;
   position: relative;

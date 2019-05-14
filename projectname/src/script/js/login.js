@@ -69,7 +69,7 @@ $('#btn').on('click', function() {
                 $('#password').val('');
             } else { //成功,存cookie,跳转到首页
                 addCookie('UserName', $phone, 7);
-                location.href = 'index123.html';
+                location.href = 'http://10.31.163.68/projectname/src/';
             }
         }
     })

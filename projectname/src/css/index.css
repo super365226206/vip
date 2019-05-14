@@ -359,6 +359,9 @@ nav {
   margin-top: -3px;
   margin-right: 6px;
 }
+#nav ul li:first-child:hover .nav-sec-group {
+  display: block;
+}
 #nav ul li {
   float: left;
   position: relative;
@@ -1093,6 +1096,153 @@ nav {
 }
 #main-stairs-left ul li:hover a {
   color: #f10180;
+}
+
+#right-nav {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1999;
+  width: 36px;
+  height: 100%;
+  font-family: "Microsoft YaHei";
+}
+#right-nav i {
+  font-style: normal;
+}
+#right-nav .right-nav-group {
+  position: relative;
+  z-index: 101;
+  height: 100%;
+  background-color: #262626;
+}
+#right-nav .right-nav-group .right-nav-cont {
+  margin-top: -250px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+#right-nav .right-nav-group .right-nav-cont ul .my-cart section {
+  background-color: #df147f;
+  color: #fff;
+}
+#right-nav .right-nav-group .right-nav-cont ul .my-cart i {
+  background-color: #df147f;
+}
+#right-nav .right-nav-group .right-nav-cont ul .my-cart p {
+  position: relative;
+  margin: 0 auto;
+  width: 14px;
+  height: 100%;
+  background-color: #df147f;
+  border: 0;
+  line-height: 18px;
+  font-size: 14px;
+  z-index: 13;
+  right: 0;
+}
+#right-nav .right-nav-group .right-nav-cont ul li {
+  margin-bottom: 2px;
+  position: relative;
+  width: 36px;
+  text-align: center;
+  cursor: pointer;
+}
+#right-nav .right-nav-group .right-nav-cont ul li i {
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #262626;
+  color: #fff;
+}
+#right-nav .right-nav-group .right-nav-cont ul li p {
+  position: absolute;
+  right: -120px;
+  top: 0;
+  z-index: -1;
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 8px;
+  border-radius: 3px 0 0 3px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-right: none;
+  font-size: 14px;
+  text-align: center;
+  transition: .3s linear;
+}
+#right-nav .right-nav-group .right-nav-cont .my-cart-info {
+  z-index: -1;
+  position: absolute;
+  right: -300px;
+  top: 0;
+  overflow: hidden;
+  width: 246px;
+  height: 160px;
+  padding: 0 14px;
+  background-color: #fff;
+  border: 1px solid #cecece;
+  border-right: none;
+  -webkit-transition: right .2s linear;
+  transition: right .2s linear;
+  box-shadow: -5px 1px 8px rgba(0, 0, 0, 0.15);
+}
+#right-nav .right-nav-group .right-nav-cont .my-cart-info i {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+}
+#right-nav .right-nav-group .right-nav-cont .my-cart-info p {
+  position: absolute;
+  top: 60px;
+  left: 45px;
+  text-align: center;
+}
+#right-nav .right-nav-group .right-nav-cont .my-cart-info p a {
+  color: #df147f;
+}
+#right-nav .right-nav-group .right-nav-foot {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#right-nav .right-nav-group .right-nav-foot section {
+  margin-bottom: 2px;
+}
+#right-nav .right-nav-group .right-nav-foot section a {
+  color: #fff;
+  position: relative;
+  display: block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  background-color: #262626;
+  text-align: center;
+}
+#right-nav .right-nav-group .right-nav-foot section p {
+  position: absolute;
+  right: -120px;
+  top: 0;
+  z-index: -1;
+  width: 100px;
+  height: 34px;
+  line-height: 34px;
+  padding: 0 8px;
+  border-radius: 3px 0 0 3px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-right: none;
+  font-size: 14px;
+  text-align: center;
+  transition: .3s linear;
+}
+#right-nav .right-nav-group .right-nav-foot .back-top p {
+  top: 38px;
 }
 
 footer {

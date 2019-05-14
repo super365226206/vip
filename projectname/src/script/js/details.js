@@ -100,6 +100,44 @@
         // });
     }();
 
+    ! function() {
+        $('.details-add').on('click', function() {
+            var $count = $('.details-num').html(); //值
+            $count++;
+            if ($count >= 99) {
+                $count = 99;
+            }
+            $('.details-num').html($count); //赋值回去
+            // $(this).parents('.goods-item').find('.b-sum').find('strong').html(singlegoodsprice($(this))); //改变后的价格
+            // priceall(); //重新计算总和。
+            setcookie($(this)); //将改变的数量重新添加到cookie
+
+        });
+
+        //改变商品数量--
+        $('.details-minus').on('click', function() {
+            var $count = $('.details-num').html();
+            $count--;
+            if ($count <= 1) {
+                $count = 1;
+            }
+            $('.details-num').html($count);
+            // $(this).parents('.goods-item').find('.b-sum').find('strong').html(singlegoodsprice($(this))); //改变后的价格
+            // priceall();
+            setcookie($(this));
+        });
+
+        function setcookie(obj) { //obj:当前操作的对象
+            cookietoarray(); //得到数组
+            var $index = $('#smallpic').attr('sid'); //通过id找数量的位置
+            arrnum[$.inArray($index, arrsid)] = $('.details-num').html();
+            addcookie('cookienum', arrnum.toString(), 7);
+        }
+
+    }();
+
+
+
     //购物车的思路
     //存放商品的sid和商品的数量--数组实现。
     //如果商品第一次存购物车，存放的是商品的sid和商品的数量。
@@ -119,7 +157,7 @@
     }
 
     //2.有了上面的方法，可以点击加入购物车按钮判断商品是否是第一次还是多次。
-    console.log($('.p-btn'))
+    // console.log($('.p-btn'))
     $('.p-btn').on('click', function() { //点击加入购物车按钮。
 
         //判断当前的商品sid是否存在购物车(cookie)
@@ -127,6 +165,7 @@
 
         //获取当前的按钮对应的商品的sid
         var $sid = $(this).parents('.wrapper').find('#smallpic').attr('sid');
+
         cookietoarray(); //获取已经存在的cookie值。
         if ($.inArray($sid, arrsid) != -1) { //商品存在，数量叠加 
             //先取出cookie中的对应的数量值+当前添加的数量值，添加到对应的cookie中。
